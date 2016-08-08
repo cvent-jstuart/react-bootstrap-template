@@ -1,0 +1,450 @@
+import React from "react";
+
+import { Modal, Table, Button } from "react-bootstrap";
+
+// require("./.less");
+
+export default class ModalRoute extends React.Component {
+  render() {
+    return (
+      <div className="body">
+
+        <div class="page-header">
+          <h1>Modal</h1>
+        </div>
+        <div>
+          <h3>
+            Basic Modal
+          </h3>
+          <div className="static-modal">
+            <Modal.Dialog style={{position: "static"}}>
+              <Modal.Header>
+                <Modal.Title>Modal title</Modal.Title>
+              </Modal.Header>
+
+              <Modal.Body>
+                One fine body...
+              </Modal.Body>
+
+              <Modal.Footer>
+                <Button>Close</Button>
+                <Button bsStyle="primary">Save changes</Button>
+              </Modal.Footer>
+
+            </Modal.Dialog>
+          </div>
+        </div>
+        <hr></hr>
+        <div>
+          <h3 data-toggle="collapse" data-target="#modal-props-table" style={{cursor: "pointer"}}>
+            Props
+          </h3>
+          <div id="modal-props-table" class="collapse">
+            <Table striped bordered>
+              <thead>
+            		<tr>
+            			<th>
+            				Name
+            			</th>
+            			<th>
+            				Type
+            			</th>
+            			<th>
+            				Default
+            			</th>
+            			<th>
+            				Description
+            			</th>
+            		</tr>
+            	</thead>
+            	<tbody>
+            		<tr>
+            			<td>
+            				animation
+            			</td>
+            			<td>
+            				<div>
+            					boolean
+            				</div>
+            			</td>
+            			<td>
+            				true
+            			</td>
+            			<td>
+            				<div>
+            					<p>
+            						Open and close the Modal with a slide and fade animation.
+            					</p>
+            				</div>
+            			</td>
+            		</tr>
+            		<tr>
+            			<td>
+            				autoFocus
+            			</td>
+            			<td>
+            				<div>
+            					boolean
+            				</div>
+            			</td>
+            			<td>
+            				&nbsp;
+            			</td>
+            			<td>
+            				<div>
+            					<p>
+            						When
+            						<code>
+            							true
+            						</code>
+            						 The modal will automatically shift focus to itself when it opens, and replace it to the last focused element when it closes. Generally this should never be set to false as it makes the Modal less accessible to assistive technologies, like screen-readers.
+            					</p>
+            				</div>
+            			</td>
+            		</tr>
+            		<tr>
+            			<td>
+            				backdrop
+            			</td>
+            			<td>
+            				<div>
+            					one of:
+            					<code>
+            						'static'
+            					</code>
+            					,
+            					<code>
+            						true
+            					</code>
+            					,
+            					<code>
+            						false
+            					</code>
+            				</div>
+            			</td>
+            			<td>
+            				&nbsp;
+            			</td>
+            			<td>
+            				<div>
+            					<p>
+            						Include a backdrop component. Specify 'static' for a backdrop that doesnt trigger an "onHide" when clicked.
+            					</p>
+            				</div>
+            			</td>
+            		</tr>
+            		<tr>
+            			<td>
+            				bsClass
+            			</td>
+            			<td>
+            				<div>
+            					string
+            				</div>
+            			</td>
+            			<td>
+            				'modal'
+            			</td>
+            			<td>
+            				<div>
+            					<p>
+            						Base CSS class and prefix for the component. Generally one should only change
+            						<code>
+            							bsClass
+            						</code>
+            						 to provide new, non-Bootstrap, CSS styles for a component.
+            					</p>
+            				</div>
+            			</td>
+            		</tr>
+            		<tr>
+            			<td>
+            				bsSize
+            			</td>
+            			<td>
+            				<div>
+            					one of:
+            					<code>
+            						"lg"
+            					</code>
+            					,
+            					<code>
+            						"large"
+            					</code>
+            					,
+            					<code>
+            						"sm"
+            					</code>
+            					,
+            					<code>
+            						"small"
+            					</code>
+            				</div>
+            			</td>
+            			<td>
+            				&nbsp;
+            			</td>
+            			<td>
+            				<div>
+            					<p>
+            						Component size variations.
+            					</p>
+            				</div>
+            			</td>
+            		</tr>
+            		<tr>
+            			<td>
+            				dialogClassName
+            			</td>
+            			<td>
+            				<div>
+            					string
+            				</div>
+            			</td>
+            			<td>
+            				&nbsp;
+            			</td>
+            			<td>
+            				<div>
+            					<p>
+            						A css class to apply to the Modal dialog DOM node.
+            					</p>
+            				</div>
+            			</td>
+            		</tr>
+            		<tr>
+            			<td>
+            				dialogComponentClass
+            			</td>
+            			<td>
+            				<div>
+            					elementType
+            				</div>
+            			</td>
+            			<td>
+            				ModalDialog
+            			</td>
+            			<td>
+            				<div>
+            					<p>
+            						A Component type that provides the modal content Markup. This is a useful prop when you want to use your own styles and markup to create a custom modal component.
+            					</p>
+            				</div>
+            			</td>
+            		</tr>
+            		<tr>
+            			<td>
+            				enforceFocus
+            			</td>
+            			<td>
+            				<div>
+            					boolean
+            				</div>
+            			</td>
+            			<td>
+            				&nbsp;
+            			</td>
+            			<td>
+            				<div>
+            					<p>
+            						When
+            						<code>
+            							true
+            						</code>
+            						 The modal will prevent focus from leaving the Modal while open. Consider leaving the default value here, as it is necessary to make the Modal work well with assistive technologies, such as screen readers.
+            					</p>
+            				</div>
+            			</td>
+            		</tr>
+            		<tr>
+            			<td>
+            				keyboard
+            			</td>
+            			<td>
+            				<div>
+            					boolean
+            				</div>
+            			</td>
+            			<td>
+            				&nbsp;
+            			</td>
+            			<td>
+            				<div>
+            					<p>
+            						Close the modal when escape key is pressed
+            					</p>
+            				</div>
+            			</td>
+            		</tr>
+            		<tr>
+            			<td>
+            				onEnter
+            			</td>
+            			<td>
+            				<div>
+            					function
+            				</div>
+            			</td>
+            			<td>
+            				&nbsp;
+            			</td>
+            			<td>
+            				<div>
+            					<p>
+            						Callback fired before the Modal transitions in
+            					</p>
+            				</div>
+            			</td>
+            		</tr>
+            		<tr>
+            			<td>
+            				onEntered
+            			</td>
+            			<td>
+            				<div>
+            					function
+            				</div>
+            			</td>
+            			<td>
+            				&nbsp;
+            			</td>
+            			<td>
+            				<div>
+            					<p>
+            						Callback fired after the Modal finishes transitioning in
+            					</p>
+            				</div>
+            			</td>
+            		</tr>
+            		<tr>
+            			<td>
+            				onEntering
+            			</td>
+            			<td>
+            				<div>
+            					function
+            				</div>
+            			</td>
+            			<td>
+            				&nbsp;
+            			</td>
+            			<td>
+            				<div>
+            					<p>
+            						Callback fired as the Modal begins to transition in
+            					</p>
+            				</div>
+            			</td>
+            		</tr>
+            		<tr>
+            			<td>
+            				onExit
+            			</td>
+            			<td>
+            				<div>
+            					function
+            				</div>
+            			</td>
+            			<td>
+            				&nbsp;
+            			</td>
+            			<td>
+            				<div>
+            					<p>
+            						Callback fired right before the Modal transitions out
+            					</p>
+            				</div>
+            			</td>
+            		</tr>
+            		<tr>
+            			<td>
+            				onExited
+            			</td>
+            			<td>
+            				<div>
+            					function
+            				</div>
+            			</td>
+            			<td>
+            				&nbsp;
+            			</td>
+            			<td>
+            				<div>
+            					<p>
+            						Callback fired after the Modal finishes transitioning out
+            					</p>
+            				</div>
+            			</td>
+            		</tr>
+            		<tr>
+            			<td>
+            				onExiting
+            			</td>
+            			<td>
+            				<div>
+            					function
+            				</div>
+            			</td>
+            			<td>
+            				&nbsp;
+            			</td>
+            			<td>
+            				<div>
+            					<p>
+            						Callback fired as the Modal begins to transition out
+            					</p>
+            				</div>
+            			</td>
+            		</tr>
+            		<tr>
+            			<td>
+            				onHide
+            			</td>
+            			<td>
+            				<div>
+            					function
+            				</div>
+            			</td>
+            			<td>
+            				&nbsp;
+            			</td>
+            			<td>
+            				<div>
+            					<p>
+            						A callback fired when the header closeButton or non-static backdrop is clicked. Required if either are specified.
+            					</p>
+            				</div>
+            			</td>
+            		</tr>
+            		<tr>
+            			<td>
+            				show
+            			</td>
+            			<td>
+            				<div>
+            					boolean
+            				</div>
+            			</td>
+            			<td>
+            				&nbsp;
+            			</td>
+            			<td>
+            				<div>
+            					<p>
+            						When
+            						<code>
+            							true
+            						</code>
+            						 The modal will show itself.
+            					</p>
+            				</div>
+            			</td>
+            		</tr>
+            	</tbody>
+            </Table>
+          </div>
+        </div>
+      </div>
+    )
+  }
+}

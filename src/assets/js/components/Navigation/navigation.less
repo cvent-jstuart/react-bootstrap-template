@@ -1,0 +1,31 @@
+/* LESS Variables File */
+@import "../../../styles/less/variables";
+
+.nav-links {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  & ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  & li {
+    float: left;
+    & a {
+      display: inline-block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      transition: 0.3s;
+      font-size: 17px;
+      &:hover, &.active {
+        background-color: #555;
+      }
+    }
+  }
+}
