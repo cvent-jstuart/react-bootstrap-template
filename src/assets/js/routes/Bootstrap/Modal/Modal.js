@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Modal, Table, Button } from "react-bootstrap";
+import ModalByButton from "./ModalByButton"
 import PropTable from "../../../components/PropTable/PropTable";
 
 // require("./.less");
@@ -34,6 +35,19 @@ export default class ModalRoute extends React.Component {
 
             </Modal.Dialog>
           </div>
+        </div>
+        <hr></hr>
+        <h3>
+          Modal Launch Examples
+        </h3>
+        <div>
+          <ModalByButton buttonTitle="Launch Modal"/>
+        </div>
+        <div style={{ marginTop: 10 }}>
+          <ModalByButton buttonTitle="Launch Small Modal" bsSize="small"/>
+        </div>
+        <div style={{ marginTop: 10 }}>
+          <ModalByButton buttonTitle="Launch Large Modal" bsSize="large"/>
         </div>
         <hr></hr>
         <div>
@@ -435,6 +449,274 @@ export default class ModalRoute extends React.Component {
               							true
               						</code>
               						 The modal will show itself.
+              					</p>
+              				</div>
+              			</td>
+              		</tr>
+              	</tbody>
+              </Table>
+            </div>
+          </PropTable>
+        </div>
+        <hr></hr>
+        <div>
+          <PropTable title="Modal.Header Props">
+            <div>
+              <Table striped bordered>
+                <thead>
+                  <tr>
+                    <th>
+                      Name
+                    </th>
+                    <th>
+                      Type
+                    </th>
+                    <th>
+                      Default
+                    </th>
+                    <th>
+                      Description
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      aria-label
+                    </td>
+                    <td>
+                      <div>
+                        string
+                      </div>
+                    </td>
+                    <td>
+                      'Close'
+                    </td>
+                    <td>
+                      <div>
+                        <p>
+                          The 'aria-label' attribute provides an accessible label for the close button. It is used for Assistive Technology when the label text is not readable.
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      bsClass
+                    </td>
+                    <td>
+                      <div>
+                        string
+                      </div>
+                    </td>
+                    <td>
+                      'modal-header'
+                    </td>
+                    <td>
+                      <div>
+                        <p>
+                          Base CSS class and prefix for the component. Generally one should only change
+                          <code>
+                            bsClass
+                          </code>
+                           to provide new, non-Bootstrap, CSS styles for a component.
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      closeButton
+                    </td>
+                    <td>
+                      <div>
+                        boolean
+                      </div>
+                    </td>
+                    <td>
+                      false
+                    </td>
+                    <td>
+                      <div>
+                        <p>
+                          Specify whether the Component should contain a close button
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      onHide
+                    </td>
+                    <td>
+                      <div>
+                        function
+                      </div>
+                    </td>
+                    <td>
+                      &nbsp;
+                    </td>
+                    <td>
+                      <div>
+                        <p>
+                          A Callback fired when the close button is clicked. If used directly inside a Modal component, the onHide will automatically be propagated up to the parent Modal
+                          <code>
+                            onHide
+                          </code>
+                          .
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </Table>
+            </div>
+          </PropTable>
+        </div>
+        <hr></hr>
+        <div>
+          <PropTable title="Modal.Title Props">
+            <div>
+              <Table striped bordered>
+                <thead>
+              		<tr>
+              			<th>
+              				Name
+              			</th>
+              			<th>
+              				Type
+              			</th>
+              			<th>
+              				Default
+              			</th>
+              			<th>
+              				Description
+              			</th>
+              		</tr>
+              	</thead>
+              	<tbody>
+              		<tr>
+              			<td>
+              				bsClass
+              			</td>
+              			<td>
+              				<div>
+              					string
+              				</div>
+              			</td>
+              			<td>
+              				'modal-title'
+              			</td>
+              			<td>
+              				<div>
+              					<p>
+              						Base CSS class and prefix for the component. Generally one should only change
+              						<code>
+              							bsClass
+              						</code>
+              						 to provide new, non-Bootstrap, CSS styles for a component.
+              					</p>
+              				</div>
+              			</td>
+              		</tr>
+              	</tbody>
+              </Table>
+            </div>
+          </PropTable>
+        </div>
+        <hr></hr>
+        <div>
+          <PropTable title="Modal.Body Props">
+            <div>
+              <Table striped bordered>
+                <thead>
+              		<tr>
+              			<th>
+              				Name
+              			</th>
+              			<th>
+              				Type
+              			</th>
+              			<th>
+              				Default
+              			</th>
+              			<th>
+              				Description
+              			</th>
+              		</tr>
+              	</thead>
+              	<tbody>
+              		<tr>
+              			<td>
+              				bsClass
+              			</td>
+              			<td>
+              				<div>
+              					string
+              				</div>
+              			</td>
+              			<td>
+              				'modal-body'
+              			</td>
+              			<td>
+              				<div>
+              					<p>
+              						Base CSS class and prefix for the component. Generally one should only change
+              						<code>
+              							bsClass
+              						</code>
+              						 to provide new, non-Bootstrap, CSS styles for a component.
+              					</p>
+              				</div>
+              			</td>
+              		</tr>
+              	</tbody>
+              </Table>
+            </div>
+          </PropTable>
+        </div>
+        <hr></hr>
+        <div>
+          <PropTable title="Modal.Footer Props">
+            <div>
+              <Table striped bordered>
+                <thead>
+              		<tr>
+              			<th>
+              				Name
+              			</th>
+              			<th>
+              				Type
+              			</th>
+              			<th>
+              				Default
+              			</th>
+              			<th>
+              				Description
+              			</th>
+              		</tr>
+              	</thead>
+              	<tbody>
+              		<tr>
+              			<td>
+              				bsClass
+              			</td>
+              			<td>
+              				<div>
+              					string
+              				</div>
+              			</td>
+              			<td>
+              				'modal-footer'
+              			</td>
+              			<td>
+              				<div>
+              					<p>
+              						Base CSS class and prefix for the component. Generally one should only change
+              						<code>
+              							bsClass
+              						</code>
+              						 to provide new, non-Bootstrap, CSS styles for a component.
               					</p>
               				</div>
               			</td>
