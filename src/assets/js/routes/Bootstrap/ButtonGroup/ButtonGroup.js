@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Button, ButtonToolbar, Table, ButtonGroup, DropdownButton, MenuItem } from "react-bootstrap";
+import PropTable from "../../../components/PropTable/PropTable";
 
 // require("./.less");
 
@@ -147,32 +148,31 @@ export default class ButtonsGroupRoute extends React.Component {
           </div>
           <hr></hr>
           <div>
-            <h3 data-toggle="collapse" data-target="#button-group-props-table" style={{cursor: "pointer"}}>
-              Props
-            </h3>
-            <div id="button-group-props-table" class="collapse">
-              <Table striped bordered>
-                <thead>
-                  <tr>
-                    <td>Name	</td><td>Type	</td><td>Default	</td><td>Description</td>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>block	</td><td>boolean</td><td>false	</td><td>Display block buttons; only useful when used with the "vertical" prop.</td>
-                  </tr>
-                  <tr>
-                    <td>bsClass	</td><td>string</td><td>'btn-group'	</td><td>Base CSS class and prefix for the component. Generally one should only change bsClass to provide new, non-Bootstrap, CSS styles for a component.</td>
-                  </tr>
-                  <tr>
-                    <td>justified	</td><td>boolean</td><td>false	</td><td></td>
-                  </tr>
-                  <tr>
-                    <td>vertical	</td><td>boolean</td><td>false</td><td></td>
-                  </tr>
-                </tbody>
-              </Table>
-          </div>
+            <PropTable title="ButtonGroup Props">
+              <div>
+                <Table striped bordered>
+                  <thead>
+                    <tr>
+                      <td>Name	</td><td>Type	</td><td>Default	</td><td>Description</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>block	</td><td>boolean</td><td>false	</td><td>Display block buttons; only useful when used with the "vertical" prop.</td>
+                    </tr>
+                    <tr>
+                      <td>bsClass	</td><td>string</td><td>'btn-group'	</td><td>Base CSS class and prefix for the component. Generally one should only change bsClass to provide new, non-Bootstrap, CSS styles for a component.</td>
+                    </tr>
+                    <tr>
+                      <td>justified	</td><td>boolean</td><td>false	</td><td></td>
+                    </tr>
+                    <tr>
+                      <td>vertical	</td><td>boolean</td><td>false</td><td></td>
+                    </tr>
+                  </tbody>
+                </Table>
+              </div>
+            </PropTable>
           </div>
       </div>
     )
