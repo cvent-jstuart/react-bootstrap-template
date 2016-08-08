@@ -26,6 +26,7 @@ import Panel from "./routes/Bootstrap/Panel/Panel";
 import Well from "./routes/Bootstrap/Well/Well";
 import Carousel from "./routes/Bootstrap/Carousel/Carousel";
 import Modal from "./routes/Bootstrap/Modal/Modal";
+import Tooltip from "./routes/Bootstrap/Tooltip/Tooltip";
 
 const appRoot = document.getElementById("app-root");
 
@@ -73,6 +74,7 @@ ReactDOM.render(
         <Route path="wells" component={Well}></Route>
         <Route path="carousels" component={Carousel}></Route>
         <Route path="modals" component={Modal}></Route>
+        <Route path="tooltips" component={Tooltip}></Route>
       </Route>
     </Router>
   </Provider>,
