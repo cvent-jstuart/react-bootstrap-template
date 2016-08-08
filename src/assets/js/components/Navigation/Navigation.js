@@ -14,6 +14,7 @@ const links = [
       "Dropdowns",
       "Modals",
       "Tooltips",
+      "Popovers",
       "Tables",
       "Thumbnails",
       "Labels",

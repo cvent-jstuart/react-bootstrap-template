@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Tooltip, OverlayTrigger, ButtonToolbar, Button, Table } from "react-bootstrap";
+import { Tooltip, Popover, OverlayTrigger, ButtonToolbar, Button, Table } from "react-bootstrap";
 import PropTable from "../../../components/PropTable/PropTable";
 
 // require("./.less");
@@ -8,56 +8,97 @@ import PropTable from "../../../components/PropTable/PropTable";
 export default class TooltipRoute extends React.Component {
 
   render() {
-    const tooltip = (
-      <Tooltip id="tooltip"><strong>Holy guacamole!</strong> Check this info.</Tooltip>
+    const popoverLeft = (
+      <Popover id="popover-positioned-left" title="Popover left">
+        <strong>Holy guacamole!</strong> Check this info.
+      </Popover>
+    );
+
+    const popoverTop = (
+      <Popover id="popover-positioned-top" title="Popover top">
+        <strong>Holy guacamole!</strong> Check this info.
+      </Popover>
+    );
+
+    const popoverBottom = (
+      <Popover id="popover-positioned-bottom" title="Popover bottom">
+        <strong>Holy guacamole!</strong> Check this info.
+      </Popover>
+    );
+
+    const popoverRight = (
+      <Popover id="popover-positioned-right" title="Popover right">
+        <strong>Holy guacamole!</strong> Check this info.
+      </Popover>
     );
 
     return (
       <div className="body">
 
         <div class="page-header">
-          <h1>Tooltips</h1>
+          <h1>Popovers</h1>
         </div>
-        <div>
+        <div style={{ height: 120 }}>
           <h3>
-            Standard Tooltips
+            Standard Popovers
           </h3>
-          <Tooltip placement="right" className="in" id="tooltip-right" style={{ position: "relative", display: "inline-block", margin: "5px 10px", zIndex: 1 }}>
-            Tooltip right
-          </Tooltip>
-
-          <Tooltip placement="top" className="in" id="tooltip-top" style={{ position: "relative", display: "inline-block", margin: "5px 10px", zIndex: 1 }}>
-            Tooltip top
-          </Tooltip>
-
-          <Tooltip placement="left" className="in" id="tooltip-left" style={{ position: "relative", display: "inline-block", margin: "5px 10px", zIndex: 1 }}>
-            Tooltip left
-          </Tooltip>
-
-          <Tooltip placement="bottom" className="in" id="tooltip-bottom" style={{ position: "relative", display: "inline-block", margin: "5px 10px", zIndex: 1 }}>
-            Tooltip bottom
-          </Tooltip>
+          <Popover
+            id="popover-basic"
+            placement="right"
+            positionLeft={0}
+            positionTop={0}
+            title="Popover right"
+            style={{ position: "relative", display: "inline-block", zIndex: 1 }}
+          >
+            And here's some <strong>amazing</strong> content. It's very engaging. right?
+          </Popover>
         </div>
         <hr></hr>
         <div>
           <h3>
-            With OverlayTrigger
+            With OverlayTrigger onHover
+          </h3>
+          <h5>
+            It&apos;s inadvisable to use "hover" or "focus" triggers for popovers, because they have poor accessibility from keyboard and on mobile devices.
+          </h5>
+          <ButtonToolbar>
+            <OverlayTrigger placement="left" overlay={popoverLeft}>
+              <Button bsStyle="default">Left Hover Placement</Button>
+            </OverlayTrigger>
+
+            <OverlayTrigger placement="top" overlay={popoverTop}>
+              <Button bsStyle="default">Top Hover Placement</Button>
+            </OverlayTrigger>
+
+            <OverlayTrigger placement="bottom" overlay={popoverBottom}>
+              <Button bsStyle="default">Bottom Hover Placement</Button>
+            </OverlayTrigger>
+
+            <OverlayTrigger placement="right" overlay={popoverTop}>
+              <Button bsStyle="default">Right Hover Placement</Button>
+            </OverlayTrigger>
+          </ButtonToolbar>
+        </div>
+        <hr></hr>
+        <div>
+          <h3>
+            With OverlayTrigger onClick
           </h3>
           <ButtonToolbar>
-            <OverlayTrigger placement="left" overlay={tooltip}>
-              <Button bsStyle="default">Left Placement</Button>
+            <OverlayTrigger trigger="click" placement="left" overlay={popoverLeft}>
+              <Button bsStyle="default">Left Click Placement</Button>
             </OverlayTrigger>
 
-            <OverlayTrigger placement="top" overlay={tooltip}>
-              <Button bsStyle="default">Top Placement</Button>
+            <OverlayTrigger trigger="click" placement="top" overlay={popoverTop}>
+              <Button bsStyle="default">Top Click Placement</Button>
             </OverlayTrigger>
 
-            <OverlayTrigger placement="bottom" overlay={tooltip}>
-              <Button bsStyle="default">Bottom Placement</Button>
+            <OverlayTrigger trigger="click" placement="bottom" overlay={popoverBottom}>
+              <Button bsStyle="default">Bottom Click Placement</Button>
             </OverlayTrigger>
 
-            <OverlayTrigger placement="right" overlay={tooltip}>
-              <Button bsStyle="default">Right Placement</Button>
+            <OverlayTrigger trigger="click" placement="right" overlay={popoverTop}>
+              <Button bsStyle="default">Right Click Placement</Button>
             </OverlayTrigger>
           </ButtonToolbar>
         </div>
