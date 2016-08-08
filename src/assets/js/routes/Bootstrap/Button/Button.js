@@ -1,10 +1,16 @@
 import React from "react";
 
-import { Button, ButtonToolbar, Table } from "react-bootstrap";
+import { Button, ButtonToolbar, Table, Collapse } from "react-bootstrap";
+import PropTable from "../../../components/PropTable/PropTable";
 
 // require("./.less");
 
 export default class ButtonsRoute extends React.Component {
+  constructor() {
+    super();
+    this.state = {};
+  }
+
   render() {
     return (
       <div className="body">
@@ -97,50 +103,49 @@ export default class ButtonsRoute extends React.Component {
         </div>
         <hr></hr>
         <div>
-          <h3 data-toggle="collapse" data-target="#button-props-table" style={{cursor: "pointer"}}>
-            Props
-          </h3>
-          <div id="button-props-table" class="collapse">
-            <Table striped bordered>
-              <thead>
-                <tr>
-                  <td>Name	</td><td>Type	</td><td>Default	</td><td>Description</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>active	</td><td>boolean</td><td>false	</td><td></td>
-                </tr>
-                <tr>
-                  <td>block	</td><td>boolean</td><td>false	</td><td></td>
-                </tr>
-                <tr>
-                  <td>bsClass	</td><td>string</td><td>'btn'	</td><td>Base CSS class and prefix for the component. Generally one should only change bsClass to provide new, non-Bootstrap, CSS styles for a component.</td>
-                </tr>
-                <tr>
-                  <td>bsSize	</td><td>one of: "lg", "large", "sm", "small", "xs", "xsmall"</td><td></td><td>Component size variations.</td>
-                </tr>
-                <tr>
-                  <td>bsStyle	</td><td>one of: "success", "warning", "danger", "info", "default", "primary", "link"</td><td>'default'	</td><td>Component visual or contextual style variants.</td>
-                </tr>
-                <tr>
-                  <td>componentClass	</td><td>elementType</td><td></td><td>You can use a custom element type for this component.</td>
-                </tr>
-                <tr>
-                  <td>disabled	</td><td>boolean</td><td>false	</td><td></td>
-                </tr>
-                <tr>
-                  <td>href	</td><td>string</td><td></td><td></td>
-                </tr>
-                <tr>
-                  <td>onClick	</td><td>function</td><td></td><td></td>
-                </tr>
-                <tr>
-                  <td>type	</td><td>one of: 'button', 'reset', 'submit'</td><td>'button'	</td><td>Defines HTML button type attribute</td>
-                </tr>
-              </tbody>
-            </Table>
-          </div>
+          <PropTable title="Button Props">
+            <div>
+              <Table striped bordered>
+                <thead>
+                  <tr>
+                    <td>Name	</td><td>Type	</td><td>Default	</td><td>Description</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>active	</td><td>boolean</td><td>false	</td><td></td>
+                  </tr>
+                  <tr>
+                    <td>block	</td><td>boolean</td><td>false	</td><td></td>
+                  </tr>
+                  <tr>
+                    <td>bsClass	</td><td>string</td><td>'btn'	</td><td>Base CSS class and prefix for the component. Generally one should only change bsClass to provide new, non-Bootstrap, CSS styles for a component.</td>
+                  </tr>
+                  <tr>
+                    <td>bsSize	</td><td>one of: "lg", "large", "sm", "small", "xs", "xsmall"</td><td></td><td>Component size variations.</td>
+                  </tr>
+                  <tr>
+                    <td>bsStyle	</td><td>one of: "success", "warning", "danger", "info", "default", "primary", "link"</td><td>'default'	</td><td>Component visual or contextual style variants.</td>
+                  </tr>
+                  <tr>
+                    <td>componentClass	</td><td>elementType</td><td></td><td>You can use a custom element type for this component.</td>
+                  </tr>
+                  <tr>
+                    <td>disabled	</td><td>boolean</td><td>false	</td><td></td>
+                  </tr>
+                  <tr>
+                    <td>href	</td><td>string</td><td></td><td></td>
+                  </tr>
+                  <tr>
+                    <td>onClick	</td><td>function</td><td></td><td></td>
+                  </tr>
+                  <tr>
+                    <td>type	</td><td>one of: 'button', 'reset', 'submit'</td><td>'button'	</td><td>Defines HTML button type attribute</td>
+                  </tr>
+                </tbody>
+              </Table>
+            </div>
+          </PropTable>
         </div>
       </div>
     )
