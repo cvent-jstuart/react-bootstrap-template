@@ -13,6 +13,7 @@ const links = [
       "ButtonGroups",
       "Dropdowns",
       "Modals",
+      "Tooltips",
       "Tables",
       "Thumbnails",
       "Labels",
