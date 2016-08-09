@@ -50,7 +50,7 @@ export default class NavBarsRoute extends React.Component {
 
           <ComponentHeader
             title="Responsive Navbars"
-            subtitle="To have a mobile friendly Navbar, Add a Navbar.Toggle to your Header and wrap your Navs in a Navbar.Collapse component. The Navbar will automatically wire the toggle and collapse together!<br><br>By setting the prop defaultExpanded the Navbar will start expanded by default. You can also finely control the collapsing behavior by using the expanded and onToggle props."
+            subtitle={["To have a mobile friendly Navbar, Add a Navbar.Toggle to your Header and wrap your Navs in a Navbar.Collapse component. The Navbar will automatically wire the toggle and collapse together!","By setting the prop defaultExpanded the Navbar will start expanded by default. You can also finely control the collapsing behavior by using the expanded and onToggle props."]}
           />
 
           <ComponentExample>
