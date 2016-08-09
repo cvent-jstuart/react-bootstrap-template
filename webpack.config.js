@@ -29,7 +29,7 @@ var config = function(){
   var prodPlugins       = [
                             new webpack.optimize.DedupePlugin(),
                             new webpack.optimize.OccurenceOrderPlugin(),
-                            new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false })
+                            new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false, warnings: false })
                           ];
   if (debug) { plugins = plugins.concat(debugPlugins); } else { plugins = plugins.concat(prodPlugins); };
 
