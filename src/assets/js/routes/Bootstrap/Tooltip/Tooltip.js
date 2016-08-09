@@ -7,7 +7,7 @@ import ComponentExample from "../../../components/ComponentExample/ComponentExam
 
 // require("./.less");
 
-export default class TooltipRoute extends React.Component {
+export default class TooltipsRoute extends React.Component {
 
   render() {
     const tooltip = (
