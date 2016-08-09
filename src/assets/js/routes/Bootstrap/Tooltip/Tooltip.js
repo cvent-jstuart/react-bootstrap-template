@@ -22,19 +22,19 @@ export default class TooltipRoute extends React.Component {
           <h3>
             Standard Tooltips
           </h3>
-          <Tooltip placement="right" className="in" id="tooltip-right" style={{ position: "relative", display: "inline-block", margin: "5px 10px" }}>
+          <Tooltip placement="right" className="in" id="tooltip-right" style={{ position: "relative", display: "inline-block", margin: "5px 10px", zIndex: 1 }}>
             Tooltip right
           </Tooltip>
 
-          <Tooltip placement="top" className="in" id="tooltip-top" style={{ position: "relative", display: "inline-block", margin: "5px 10px" }}>
+          <Tooltip placement="top" className="in" id="tooltip-top" style={{ position: "relative", display: "inline-block", margin: "5px 10px", zIndex: 1 }}>
             Tooltip top
           </Tooltip>
 
-          <Tooltip placement="left" className="in" id="tooltip-left" style={{ position: "relative", display: "inline-block", margin: "5px 10px" }}>
+          <Tooltip placement="left" className="in" id="tooltip-left" style={{ position: "relative", display: "inline-block", margin: "5px 10px", zIndex: 1 }}>
             Tooltip left
           </Tooltip>
 
-          <Tooltip placement="bottom" className="in" id="tooltip-bottom" style={{ position: "relative", display: "inline-block", margin: "5px 10px" }}>
+          <Tooltip placement="bottom" className="in" id="tooltip-bottom" style={{ position: "relative", display: "inline-block", margin: "5px 10px", zIndex: 1 }}>
             Tooltip bottom
           </Tooltip>
         </div>

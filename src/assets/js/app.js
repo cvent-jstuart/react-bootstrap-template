@@ -27,6 +27,7 @@ import Well from "./routes/Bootstrap/Well/Well";
 import Carousel from "./routes/Bootstrap/Carousel/Carousel";
 import Modal from "./routes/Bootstrap/Modal/Modal";
 import Tooltip from "./routes/Bootstrap/Tooltip/Tooltip";
+import Popover from "./routes/Bootstrap/Popover/Popover";
 
 const appRoot = document.getElementById("app-root");
 
@@ -75,6 +76,7 @@ ReactDOM.render(
         <Route path="carousels" component={Carousel}></Route>
         <Route path="modals" component={Modal}></Route>
         <Route path="tooltips" component={Tooltip}></Route>
+        <Route path="popovers" component={Popover}></Route>
       </Route>
     </Router>
   </Provider>,
