@@ -21,6 +21,7 @@ const links = [
       "Tabs",
       "Paginations",
       "Pagers",
+      "Grids",
       "Tables",
       "Thumbnails",
       "Labels",

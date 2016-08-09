@@ -32,6 +32,7 @@ import Breadcrumb from "./routes/Bootstrap/Breadcrumb/Breadcrumb";
 import Tab from "./routes/Bootstrap/Tab/Tab";
 import Pagination from "./routes/Bootstrap/Pagination/Pagination";
 import Pager from "./routes/Bootstrap/Pager/Pager";
+import Grid from "./routes/Bootstrap/Grid/Grid";
 
 const appRoot = document.getElementById("app-root");
 
@@ -85,6 +86,7 @@ ReactDOM.render(
         <Route path="tabs" component={Tab}></Route>
         <Route path="paginations" component={Pagination}></Route>
         <Route path="pagers" component={Pager}></Route>
+        <Route path="grids" component={Grid}></Route>
       </Route>
     </Router>
   </Provider>,
