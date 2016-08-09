@@ -2,6 +2,8 @@ import React from "react";
 
 import { Button, ButtonToolbar, Table, ButtonGroup, DropdownButton, MenuItem } from "react-bootstrap";
 import PropTable from "../../../components/PropTable/PropTable";
+import ComponentHeader from "../../../components/ComponentHeader/ComponentHeader";
+import ComponentExample from "../../../components/ComponentExample/ComponentExample";
 
 // require("./.less");
 
@@ -11,143 +13,165 @@ export default class ButtonsGroupRoute extends React.Component {
       <div className="body">
 
           <div class="page-header">
-            <h1>Button Groups</h1>
+            <h3>Button Groups</h3>
           </div>
           <div>
-            <h3>
-              ButtonGroup
-            </h3>
-            <ButtonGroup>
-              <Button>Left</Button>
-              <Button>Middle</Button>
-              <Button>Right</Button>
-            </ButtonGroup>
+
+            <ComponentHeader title="ButtonGroup" />
+
+            <ComponentExample>
+              <ButtonGroup>
+                <Button>Left</Button>
+                <Button>Middle</Button>
+                <Button>Right</Button>
+              </ButtonGroup>
+            </ComponentExample>
+
           </div>
           <hr></hr>
           <div>
-            <h3>
-              ButtonToolbar - Combine sets of &lt;ButtonGroup /&gt;s in a &lt;ButtonToolbar /&gt;
-            </h3>
-            <ButtonToolbar>
+
+            <ComponentHeader title="ButtonToolbar - Combine sets of &lt;ButtonGroup /&gt;s in a &lt;ButtonToolbar /&gt;" />
+
+            <ComponentExample>
+              <ButtonToolbar>
+                <ButtonGroup>
+                  <Button>1</Button>
+                  <Button>2</Button>
+                  <Button>3</Button>
+                  <Button>4</Button>
+                </ButtonGroup>
+
+                <ButtonGroup>
+                  <Button>5</Button>
+                  <Button>6</Button>
+                  <Button>7</Button>
+                </ButtonGroup>
+
+                <ButtonGroup>
+                  <Button>8</Button>
+                </ButtonGroup>
+              </ButtonToolbar>
+            </ComponentExample>
+
+          </div>
+          <hr></hr>
+          <div>
+
+            <ComponentHeader title="bsSize" />
+
+            <ComponentExample>
+              <ButtonToolbar>
+                <ButtonGroup bsSize="large">
+                  <Button>Left</Button>
+                  <Button>Middle</Button>
+                  <Button>Right</Button>
+                </ButtonGroup>
+              </ButtonToolbar>
+
+              <ButtonToolbar style={{marginTop: 10 + "px"}}>
+                <ButtonGroup>
+                  <Button>Left</Button>
+                  <Button>Middle</Button>
+                  <Button>Right</Button>
+                </ButtonGroup>
+              </ButtonToolbar>
+
+              <ButtonToolbar style={{marginTop: 10 + "px"}}>
+                <ButtonGroup bsSize="small">
+                  <Button>Left</Button>
+                  <Button>Middle</Button>
+                  <Button>Right</Button>
+                </ButtonGroup>
+              </ButtonToolbar>
+
+              <ButtonToolbar style={{marginTop: 10 + "px"}}>
+                <ButtonGroup bsSize="xsmall">
+                  <Button>Left</Button>
+                  <Button>Middle</Button>
+                  <Button>Right</Button>
+                </ButtonGroup>
+              </ButtonToolbar>
+            </ComponentExample>
+
+          </div>
+          <hr></hr>
+          <div>
+
+            <ComponentHeader title="Nested Dropdown" />
+
+            <ComponentExample>
               <ButtonGroup>
                 <Button>1</Button>
                 <Button>2</Button>
-                <Button>3</Button>
-                <Button>4</Button>
+                <DropdownButton title="Dropdown" id="bg-nested-dropdown">
+                  <MenuItem eventKey="1">Dropdown link</MenuItem>
+                  <MenuItem eventKey="2">Dropdown link</MenuItem>
+                </DropdownButton>
               </ButtonGroup>
+            </ComponentExample>
 
-              <ButtonGroup>
-                <Button>5</Button>
-                <Button>6</Button>
-                <Button>7</Button>
-              </ButtonGroup>
+          </div>
+          <hr></hr>
+          <div>
 
-              <ButtonGroup>
-                <Button>8</Button>
-              </ButtonGroup>
-            </ButtonToolbar>
-          </div>
-          <hr></hr>
-          <div>
-            <h3>
-              bsSize
-            </h3>
-            <ButtonToolbar>
-              <ButtonGroup bsSize="large">
-                <Button>Left</Button>
-                <Button>Middle</Button>
-                <Button>Right</Button>
-              </ButtonGroup>
-            </ButtonToolbar>
+            <ComponentHeader title="Vertical" />
 
-            <ButtonToolbar style={{marginTop: 10 + "px"}}>
-              <ButtonGroup>
-                <Button>Left</Button>
-                <Button>Middle</Button>
-                <Button>Right</Button>
+              <ComponentExample>
+              <ButtonGroup vertical>
+                <Button>Button</Button>
+                <Button>Button</Button>
+                <DropdownButton title="Dropdown" id="bg-vertical-dropdown-1">
+                  <MenuItem eventKey="1">Dropdown link</MenuItem>
+                  <MenuItem eventKey="2">Dropdown link</MenuItem>
+                </DropdownButton>
+                <Button>Button</Button>
+                <Button>Button</Button>
+                <DropdownButton title="Dropdown" id="bg-vertical-dropdown-2">
+                  <MenuItem eventKey="1">Dropdown link</MenuItem>
+                  <MenuItem eventKey="2">Dropdown link</MenuItem>
+                </DropdownButton>
+                <DropdownButton title="Dropdown" id="bg-vertical-dropdown-3">
+                  <MenuItem eventKey="1">Dropdown link</MenuItem>
+                  <MenuItem eventKey="2">Dropdown link</MenuItem>
+                </DropdownButton>
               </ButtonGroup>
-            </ButtonToolbar>
+            </ComponentExample>
 
-            <ButtonToolbar style={{marginTop: 10 + "px"}}>
-              <ButtonGroup bsSize="small">
-                <Button>Left</Button>
-                <Button>Middle</Button>
-                <Button>Right</Button>
-              </ButtonGroup>
-            </ButtonToolbar>
+          </div>
+          <hr></hr>
+          <div>
 
-            <ButtonToolbar style={{marginTop: 10 + "px"}}>
-              <ButtonGroup bsSize="xsmall">
-                <Button>Left</Button>
-                <Button>Middle</Button>
-                <Button>Right</Button>
+            <ComponentHeader title="Block" />
+
+            <ComponentExample>
+              <ButtonGroup vertical block>
+                <Button>Full width button</Button>
+                <Button>Full width button</Button>
               </ButtonGroup>
-            </ButtonToolbar>
+            </ComponentExample>
+
           </div>
           <hr></hr>
           <div>
-            <h3>
-              Nested Dropdown
-            </h3>
-            <ButtonGroup>
-              <Button>1</Button>
-              <Button>2</Button>
-              <DropdownButton title="Dropdown" id="bg-nested-dropdown">
-                <MenuItem eventKey="1">Dropdown link</MenuItem>
-                <MenuItem eventKey="2">Dropdown link</MenuItem>
-              </DropdownButton>
-            </ButtonGroup>
+
+            <ComponentHeader title="Justified" />
+
+            <ComponentExample>
+              <ButtonGroup justified>
+                <Button href="#">Left</Button>
+                <Button href="#">Middle</Button>
+                <DropdownButton title="Dropdown" id="bg-justified-dropdown">
+                  <MenuItem eventKey="1">Dropdown link</MenuItem>
+                  <MenuItem eventKey="2">Dropdown link</MenuItem>
+                </DropdownButton>
+              </ButtonGroup>
+            </ComponentExample>
+
           </div>
           <hr></hr>
           <div>
-            <h3>
-              Vergical
-            </h3>
-            <ButtonGroup vertical>
-              <Button>Button</Button>
-              <Button>Button</Button>
-              <DropdownButton title="Dropdown" id="bg-vertical-dropdown-1">
-                <MenuItem eventKey="1">Dropdown link</MenuItem>
-                <MenuItem eventKey="2">Dropdown link</MenuItem>
-              </DropdownButton>
-              <Button>Button</Button>
-              <Button>Button</Button>
-              <DropdownButton title="Dropdown" id="bg-vertical-dropdown-2">
-                <MenuItem eventKey="1">Dropdown link</MenuItem>
-                <MenuItem eventKey="2">Dropdown link</MenuItem>
-              </DropdownButton>
-              <DropdownButton title="Dropdown" id="bg-vertical-dropdown-3">
-                <MenuItem eventKey="1">Dropdown link</MenuItem>
-                <MenuItem eventKey="2">Dropdown link</MenuItem>
-              </DropdownButton>
-            </ButtonGroup>
-          </div>
-          <hr></hr>
-          <div>
-            <h3>
-              Block
-            </h3>
-            <ButtonGroup vertical block>
-              <Button>Full width button</Button>
-              <Button>Full width button</Button>
-            </ButtonGroup>
-          </div>
-          <hr></hr>
-          <div>
-            <h3>
-              Justified
-            </h3>
-            <ButtonGroup justified>
-              <Button href="#">Left</Button>
-              <Button href="#">Middle</Button>
-              <DropdownButton title="Dropdown" id="bg-justified-dropdown">
-                <MenuItem eventKey="1">Dropdown link</MenuItem>
-                <MenuItem eventKey="2">Dropdown link</MenuItem>
-              </DropdownButton>
-            </ButtonGroup>
-          </div>
-          <hr></hr>
-          <div>
+
             <PropTable title="ButtonGroup Props">
               <div>
                 <Table striped bordered>
@@ -173,6 +197,7 @@ export default class ButtonsGroupRoute extends React.Component {
                 </Table>
               </div>
             </PropTable>
+            
           </div>
       </div>
     )
