@@ -21,7 +21,7 @@ import Nav from "./routes/Bootstrap/Nav/Nav";
 import Navbar from "./routes/Bootstrap/Navbar/Navbar";
 import Alert from "./routes/Bootstrap/Alert/Alert";
 import Progressbar from "./routes/Bootstrap/Progressbar/Progressbar";
-import Listgroup from "./routes/Bootstrap/Listgroup/Listgroup";
+import ListGroup from "./routes/Bootstrap/ListGroup/ListGroup";
 import Panel from "./routes/Bootstrap/Panel/Panel";
 import Well from "./routes/Bootstrap/Well/Well";
 import Carousel from "./routes/Bootstrap/Carousel/Carousel";
@@ -76,7 +76,7 @@ ReactDOM.render(
         <Route path="navbars" component={Navbar}></Route>
         <Route path="alerts" component={Alert}></Route>
         <Route path="progressbars" component={Progressbar}></Route>
-        <Route path="listgroups" component={Listgroup}></Route>
+        <Route path="listgroups" component={ListGroup}></Route>
         <Route path="panels" component={Panel}></Route>
         <Route path="wells" component={Well}></Route>
         <Route path="carousels" component={Carousel}></Route>
