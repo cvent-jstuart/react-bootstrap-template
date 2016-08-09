@@ -33,6 +33,7 @@ import Tab from "./routes/Bootstrap/Tab/Tab";
 import Pagination from "./routes/Bootstrap/Pagination/Pagination";
 import Pager from "./routes/Bootstrap/Pager/Pager";
 import Grid from "./routes/Bootstrap/Grid/Grid";
+import PageHeader from "./routes/Bootstrap/PageHeader/PageHeader";
 
 const appRoot = document.getElementById("app-root");
 
@@ -63,7 +64,7 @@ ReactDOM.render(
         <Route path="home" component={Home}></Route>
         // <Route path="about" component={About}></Route>
         // <Route path="contact" component={Contact}></Route>
-        <Route path="jumbotron" component={Jumbotron}></Route>
+        <Route path="jumbotrons" component={Jumbotron}></Route>
         <Route path="buttons" component={Button}></Route>
         <Route path="buttongroups" component={ButtonGroup}></Route>
         <Route path="tables" component={Table}></Route>
@@ -87,6 +88,7 @@ ReactDOM.render(
         <Route path="paginations" component={Pagination}></Route>
         <Route path="pagers" component={Pager}></Route>
         <Route path="grids" component={Grid}></Route>
+        <Route path="pageheaders" component={PageHeader}></Route>
       </Route>
     </Router>
   </Provider>,
