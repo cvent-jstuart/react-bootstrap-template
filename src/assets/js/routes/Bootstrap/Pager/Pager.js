@@ -1,146 +1,153 @@
 import React from "react";
 
-import { Pager, Table } from "react-bootstrap";
+import { Pager, Table, PageHeader, Grid, Row, Col } from "react-bootstrap";
 import PropTable from "../../../components/PropTable/PropTable";
 import ComponentHeader from "../../../components/ComponentHeader/ComponentHeader";
 import ComponentExample from "../../../components/ComponentExample/ComponentExample";
 
 // require("./.less");
 
-export default class NavBarsRoute extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      activePage: 1
-    }
-    this.handleSelect = this.handleSelect.bind(this);
-  }
-
-  handleSelect(eventKey) {
-    this.setState({
-      activePage: eventKey
-    });
-  }
-
+export default class PagersRoute extends React.Component {
   render() {
     return (
       <div className="body">
 
-        <div class="page-header">
-          <h3>Pagers</h3>
-        </div>
-        <div>
+        <PageHeader>Pagers</PageHeader>
 
-          <ComponentHeader title="Centers by default" />
+        <Grid>
+          <Row>
+            <Col>
 
-          <ComponentExample>
-            <Pager>
-              <Pager.Item href="#">Previous</Pager.Item>
-              {' '}
-              <Pager.Item href="#">Next</Pager.Item>
-            </Pager>
-          </ComponentExample>
+              <ComponentHeader title="Centers by default" />
 
-        </div>
-        <hr></hr>
-        <div>
+              <ComponentExample>
+                <Pager>
+                  <Pager.Item href="#">Previous</Pager.Item>
+                  {' '}
+                  <Pager.Item href="#">Next</Pager.Item>
+                </Pager>
+              </ComponentExample>
 
-          <ComponentHeader
-            title="Aligned"
-            subtitle="Set the previous or next prop to true, to align left or right."
-          />
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <hr></hr>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
 
-          <ComponentExample>
-            <Pager>
-              <Pager.Item previous href="#">&larr; Previous Page</Pager.Item>
-              <Pager.Item next href="#">Next Page &rarr;</Pager.Item>
-            </Pager>
-          </ComponentExample>
+              <ComponentHeader
+                title="Aligned"
+                subtitle="Set the previous or next prop to true, to align left or right."
+              />
 
-        </div>
-        <hr></hr>
-        <div>
+              <ComponentExample>
+                <Pager>
+                  <Pager.Item previous href="#">&larr; Previous Page</Pager.Item>
+                  <Pager.Item next href="#">Next Page &rarr;</Pager.Item>
+                </Pager>
+              </ComponentExample>
 
-          <ComponentHeader
-            title="Disabled"
-            subtitle="Set the disabled prop to true to disable the link."
-          />
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <hr></hr>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
 
-          <ComponentExample>
-            <Pager>
-              <Pager.Item previous href="#">&larr; Previous</Pager.Item>
-              <Pager.Item disabled next href="#">Next &rarr;</Pager.Item>
-            </Pager>
-          </ComponentExample>
+              <ComponentHeader
+                title="Disabled"
+                subtitle="Set the disabled prop to true to disable the link."
+              />
 
-        </div>
-        <hr></hr>
-        <div>
+              <ComponentExample>
+                <Pager>
+                  <Pager.Item previous href="#">&larr; Previous</Pager.Item>
+                  <Pager.Item disabled next href="#">Next &rarr;</Pager.Item>
+                </Pager>
+              </ComponentExample>
 
-          <PropTable title="Pagination props" subtitle="There are no public props for the Pager.Item component.">
-            <Table striped bordered>
-              <thead>
-            		<tr>
-            			<th>
-            				Name
-            			</th>
-            			<th>
-            				Type
-            			</th>
-            			<th>
-            				Default
-            			</th>
-            			<th>
-            				Description
-            			</th>
-            		</tr>
-            	</thead>
-            	<tbody>
-            		<tr>
-            			<td>
-            				bsClass
-            			</td>
-            			<td>
-            				<div>
-            					string
-            				</div>
-            			</td>
-            			<td>
-            				'pager'
-            			</td>
-            			<td>
-            				<div>
-            					<p>
-            						Base CSS class and prefix for the component. Generally one should only change
-            						<code>
-            							bsClass
-            						</code>
-            						 to provide new, non-Bootstrap, CSS styles for a component.
-            					</p>
-            				</div>
-            			</td>
-            		</tr>
-            		<tr>
-            			<td>
-            				onSelect
-            			</td>
-            			<td>
-            				<div>
-            					function
-            				</div>
-            			</td>
-            			<td>
-            				&nbsp;
-            			</td>
-            			<td>
-            				&nbsp;
-            			</td>
-            		</tr>
-            	</tbody>
-            </Table>
-          </PropTable>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <hr></hr>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
 
-        </div>
+              <PropTable title="Pagination props" subtitle="There are no public props for the Pager.Item component.">
+                <Table striped bordered>
+                  <thead>
+                		<tr>
+                			<th>
+                				Name
+                			</th>
+                			<th>
+                				Type
+                			</th>
+                			<th>
+                				Default
+                			</th>
+                			<th>
+                				Description
+                			</th>
+                		</tr>
+                	</thead>
+                	<tbody>
+                		<tr>
+                			<td>
+                				bsClass
+                			</td>
+                			<td>
+                				<div>
+                					string
+                				</div>
+                			</td>
+                			<td>
+                				'pager'
+                			</td>
+                			<td>
+                				<div>
+                					<p>
+                						Base CSS class and prefix for the component. Generally one should only change
+                						<code>
+                							bsClass
+                						</code>
+                						 to provide new, non-Bootstrap, CSS styles for a component.
+                					</p>
+                				</div>
+                			</td>
+                		</tr>
+                		<tr>
+                			<td>
+                				onSelect
+                			</td>
+                			<td>
+                				<div>
+                					function
+                				</div>
+                			</td>
+                			<td>
+                				&nbsp;
+                			</td>
+                			<td>
+                				&nbsp;
+                			</td>
+                		</tr>
+                	</tbody>
+                </Table>
+              </PropTable>
+
+            </Col>
+          </Row>
+        </Grid>
       </div>
     )
   }
