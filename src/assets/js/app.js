@@ -30,6 +30,7 @@ import Tooltip from "./routes/Bootstrap/Tooltip/Tooltip";
 import Popover from "./routes/Bootstrap/Popover/Popover";
 import Breadcrumb from "./routes/Bootstrap/Breadcrumb/Breadcrumb";
 import Tab from "./routes/Bootstrap/Tab/Tab";
+import Pagination from "./routes/Bootstrap/Pagination/Pagination";
 
 const appRoot = document.getElementById("app-root");
 
@@ -81,6 +82,7 @@ ReactDOM.render(
         <Route path="popovers" component={Popover}></Route>
         <Route path="breadcrumbs" component={Breadcrumb}></Route>
         <Route path="tabs" component={Tab}></Route>
+        <Route path="paginations" component={Pagination}></Route>
       </Route>
     </Router>
   </Provider>,
