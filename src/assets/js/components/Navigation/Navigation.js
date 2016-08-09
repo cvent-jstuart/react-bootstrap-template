@@ -19,6 +19,7 @@ const links = [
       "Navbars",
       "Breadcrumbs",
       "Tabs",
+      "Paginations",
       "Tables",
       "Thumbnails",
       "Labels",
