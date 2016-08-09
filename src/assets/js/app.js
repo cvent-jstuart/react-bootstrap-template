@@ -28,6 +28,7 @@ import Carousel from "./routes/Bootstrap/Carousel/Carousel";
 import Modal from "./routes/Bootstrap/Modal/Modal";
 import Tooltip from "./routes/Bootstrap/Tooltip/Tooltip";
 import Popover from "./routes/Bootstrap/Popover/Popover";
+import Breadcrumb from "./routes/Bootstrap/Breadcrumb/Breadcrumb";
 
 const appRoot = document.getElementById("app-root");
 
@@ -77,6 +78,7 @@ ReactDOM.render(
         <Route path="modals" component={Modal}></Route>
         <Route path="tooltips" component={Tooltip}></Route>
         <Route path="popovers" component={Popover}></Route>
+        <Route path="breadcrumbs" component={Breadcrumb}></Route>
       </Route>
     </Router>
   </Provider>,
