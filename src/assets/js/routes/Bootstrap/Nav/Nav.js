@@ -17,7 +17,7 @@ export default class NavsRoute extends React.Component {
       <div className="body">
 
         <div class="page-header">
-          <h1>Navs</h1>
+          <h3>Navs</h3>
         </div>
         <div>
 
