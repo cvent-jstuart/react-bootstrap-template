@@ -2,177 +2,202 @@ import React from "react";
 
 import { DropdownButton, SplitButton, MenuItem, Table, Dropdown, ButtonToolbar, Clearfix } from "react-bootstrap";
 import PropTable from "../../../components/PropTable/PropTable";
+import ComponentHeader from "../../../components/ComponentHeader/ComponentHeader";
+import ComponentExample from "../../../components/ComponentExample/ComponentExample";
 
 // require("./.less");
 
 export default class DropdownsRoute extends React.Component {
   render() {
     const BUTTONS = ['Default', 'Primary', 'Success', 'Info', 'Warning', 'Danger', 'Link'];
+
     return (
       <div className="body">
-
         <div class="page-header">
-          <h1>Dropdowns</h1>
+          <h3>Dropdowns</h3>
         </div>
-        <div>
-          <h3>
-            Single button dropdowns
-          </h3>
-          <ButtonToolbar>
-            {BUTTONS.map((title, i) => {
-              return (
-                <DropdownButton bsStyle={title.toLowerCase()} title={title} key={i} id={`dropdown-basic-${i}`}>
-                  <MenuItem eventKey="1">Action</MenuItem>
-                  <MenuItem eventKey="2">Another action</MenuItem>
-                  <MenuItem eventKey="3" active>Active Item</MenuItem>
-                  <MenuItem divider />
-                  <MenuItem eventKey="4">Separated link</MenuItem>
-                </DropdownButton>
-              )
-            })}
-          </ButtonToolbar>
-        </div>
-        <hr></hr>
-        <div>
-          <h3>
-            Split button dropdowns
-          </h3>
-          <ButtonToolbar>
-            {BUTTONS.map((title, i) => {
-              return (
-                <SplitButton bsStyle={title.toLowerCase()} title={title} key={i} id={`split-button-basic-${i}`}>
-                  <MenuItem eventKey="1">Action</MenuItem>
-                  <MenuItem eventKey="2">Another action</MenuItem>
-                  <MenuItem eventKey="3">Something else here</MenuItem>
-                  <MenuItem divider />
-                  <MenuItem eventKey="4">Separated link</MenuItem>
-                </SplitButton>
-              )
-            })}
-          </ButtonToolbar>
-        </div>
-        <hr></hr>
-        <div>
-          <h3>
-            bsSize prop - large, none, small, xsmall
-          </h3>
-          <ButtonToolbar>
-            <DropdownButton bsSize="large" title="Large button" id="dropdown-size-large">
-              <MenuItem eventKey="1">Action</MenuItem>
-              <MenuItem eventKey="2">Another action</MenuItem>
-              <MenuItem eventKey="3">Something else here</MenuItem>
-              <MenuItem divider />
-              <MenuItem eventKey="4">Separated link</MenuItem>
-            </DropdownButton>
-          </ButtonToolbar>
 
-          <ButtonToolbar>
-            <DropdownButton title="Default button" id="dropdown-size-medium">
-              <MenuItem eventKey="1">Action</MenuItem>
-              <MenuItem eventKey="2">Another action</MenuItem>
-              <MenuItem eventKey="3">Something else here</MenuItem>
-              <MenuItem divider />
-              <MenuItem eventKey="4">Separated link</MenuItem>
-            </DropdownButton>
-          </ButtonToolbar>
+        <div>
 
-          <ButtonToolbar>
-            <DropdownButton bsSize="small" title="Small button" id="dropdown-size-small">
-              <MenuItem eventKey="1">Action</MenuItem>
-              <MenuItem eventKey="2">Another action</MenuItem>
-              <MenuItem eventKey="3">Something else here</MenuItem>
-              <MenuItem divider />
-              <MenuItem eventKey="4">Separated link</MenuItem>
-            </DropdownButton>
-          </ButtonToolbar>
+          <ComponentHeader title="Single button dropdowns" />
 
-          <ButtonToolbar>
-            <DropdownButton bsSize="xsmall" title="Extra small button" id="dropdown-size-extra-small">
-              <MenuItem eventKey="1">Action</MenuItem>
-              <MenuItem eventKey="2">Another action</MenuItem>
-              <MenuItem eventKey="3">Something else here</MenuItem>
-              <MenuItem divider />
-              <MenuItem eventKey="4">Separated link</MenuItem>
-            </DropdownButton>
-          </ButtonToolbar>
+          <ComponentExample>
+            <ButtonToolbar>
+              {BUTTONS.map((title, i) => {
+                return (
+                  <DropdownButton bsStyle={title.toLowerCase()} title={title} key={i} id={`dropdown-basic-${i}`}>
+                    <MenuItem eventKey="1">Action</MenuItem>
+                    <MenuItem eventKey="2">Another action</MenuItem>
+                    <MenuItem eventKey="3" active>Active Item</MenuItem>
+                    <MenuItem divider />
+                    <MenuItem eventKey="4">Separated link</MenuItem>
+                  </DropdownButton>
+                )
+              })}
+            </ButtonToolbar>
+          </ComponentExample>
+
         </div>
         <hr></hr>
         <div>
-          <h3>
-            noCaret prop
-          </h3>
-          <ButtonToolbar>
-            <DropdownButton bsStyle="default" title="No caret" noCaret id="dropdown-no-caret">
-              <MenuItem eventKey="1">Action</MenuItem>
-              <MenuItem eventKey="2">Another action</MenuItem>
-              <MenuItem eventKey="3">Something else here</MenuItem>
-              <MenuItem divider />
-              <MenuItem eventKey="4">Separated link</MenuItem>
-            </DropdownButton>
-          </ButtonToolbar>
+
+          <ComponentHeader title="Split button dropdowns" />
+
+          <ComponentExample>
+            <ButtonToolbar>
+              {BUTTONS.map((title, i) => {
+                return (
+                  <SplitButton bsStyle={title.toLowerCase()} title={title} key={i} id={`split-button-basic-${i}`}>
+                    <MenuItem eventKey="1">Action</MenuItem>
+                    <MenuItem eventKey="2">Another action</MenuItem>
+                    <MenuItem eventKey="3">Something else here</MenuItem>
+                    <MenuItem divider />
+                    <MenuItem eventKey="4">Separated link</MenuItem>
+                  </SplitButton>
+                )
+              })}
+            </ButtonToolbar>
+          </ComponentExample>
+
         </div>
         <hr></hr>
         <div>
-          <h3>
-            dropup prop
-          </h3>
-          <ButtonToolbar>
-            <SplitButton title="Dropup" dropup id="split-button-dropup">
+
+          <ComponentHeader title="bsSize prop - large, none, small, xsmall" />
+
+          <ComponentExample>
+            <ButtonToolbar style={{ marginBottom: 10 }} >
+              <DropdownButton bsSize="large" title="Large button" id="dropdown-size-large">
+                <MenuItem eventKey="1">Action</MenuItem>
+                <MenuItem eventKey="2">Another action</MenuItem>
+                <MenuItem eventKey="3">Something else here</MenuItem>
+                <MenuItem divider />
+                <MenuItem eventKey="4">Separated link</MenuItem>
+              </DropdownButton>
+            </ButtonToolbar>
+
+            <ButtonToolbar style={{ marginBottom: 10 }} >
+              <DropdownButton title="Default button" id="dropdown-size-medium">
+                <MenuItem eventKey="1">Action</MenuItem>
+                <MenuItem eventKey="2">Another action</MenuItem>
+                <MenuItem eventKey="3">Something else here</MenuItem>
+                <MenuItem divider />
+                <MenuItem eventKey="4">Separated link</MenuItem>
+              </DropdownButton>
+            </ButtonToolbar>
+
+            <ButtonToolbar style={{ marginBottom: 10 }} >
+              <DropdownButton bsSize="small" title="Small button" id="dropdown-size-small">
+                <MenuItem eventKey="1">Action</MenuItem>
+                <MenuItem eventKey="2">Another action</MenuItem>
+                <MenuItem eventKey="3">Something else here</MenuItem>
+                <MenuItem divider />
+                <MenuItem eventKey="4">Separated link</MenuItem>
+              </DropdownButton>
+            </ButtonToolbar>
+
+            <ButtonToolbar>
+              <DropdownButton bsSize="xsmall" title="Extra small button" id="dropdown-size-extra-small">
+                <MenuItem eventKey="1">Action</MenuItem>
+                <MenuItem eventKey="2">Another action</MenuItem>
+                <MenuItem eventKey="3">Something else here</MenuItem>
+                <MenuItem divider />
+                <MenuItem eventKey="4">Separated link</MenuItem>
+              </DropdownButton>
+            </ButtonToolbar>
+          </ComponentExample>
+
+        </div>
+        <hr></hr>
+        <div>
+
+          <ComponentHeader title="noCaret prop" />
+
+          <ComponentExample>
+            <ButtonToolbar>
+              <DropdownButton bsStyle="default" title="No caret" noCaret id="dropdown-no-caret">
+                <MenuItem eventKey="1">Action</MenuItem>
+                <MenuItem eventKey="2">Another action</MenuItem>
+                <MenuItem eventKey="3">Something else here</MenuItem>
+                <MenuItem divider />
+                <MenuItem eventKey="4">Separated link</MenuItem>
+              </DropdownButton>
+            </ButtonToolbar>
+          </ComponentExample>
+
+        </div>
+        <hr></hr>
+        <div>
+
+          <ComponentHeader title="dropup prop" />
+
+          <ComponentExample>
+            <ButtonToolbar style={{ marginBottom: 10 }} >
+              <SplitButton title="Dropup" dropup id="split-button-dropup">
+                <MenuItem eventKey="1">Action</MenuItem>
+                <MenuItem eventKey="2">Another action</MenuItem>
+                <MenuItem eventKey="3">Something else here</MenuItem>
+                <MenuItem divider />
+                <MenuItem eventKey="4">Separated link</MenuItem>
+              </SplitButton>
+            </ButtonToolbar>
+
+            <ButtonToolbar>
+              <SplitButton bsStyle="primary" title="Right dropup" dropup pullRight id="split-button-dropup-pull-right">
+                <MenuItem eventKey="1">Action</MenuItem>
+                <MenuItem eventKey="2">Another action</MenuItem>
+                <MenuItem eventKey="3">Something else here</MenuItem>
+                <MenuItem divider />
+                <MenuItem eventKey="4">Separated link</MenuItem>
+              </SplitButton>
+            </ButtonToolbar>
+          </ComponentExample>
+
+        </div>
+        <hr></hr>
+        <div>
+
+          <ComponentHeader title="pullRight prop" />
+
+          <ComponentExample>
+            <SplitButton title="Dropdown right" pullRight id="split-button-pull-right">
               <MenuItem eventKey="1">Action</MenuItem>
               <MenuItem eventKey="2">Another action</MenuItem>
               <MenuItem eventKey="3">Something else here</MenuItem>
               <MenuItem divider />
               <MenuItem eventKey="4">Separated link</MenuItem>
             </SplitButton>
-          </ButtonToolbar>
+          </ComponentExample>
 
-          <ButtonToolbar>
-            <SplitButton bsStyle="primary" title="Right dropup" dropup pullRight id="split-button-dropup-pull-right">
-              <MenuItem eventKey="1">Action</MenuItem>
-              <MenuItem eventKey="2">Another action</MenuItem>
-              <MenuItem eventKey="3">Something else here</MenuItem>
-              <MenuItem divider />
-              <MenuItem eventKey="4">Separated link</MenuItem>
-            </SplitButton>
-          </ButtonToolbar>
         </div>
         <hr></hr>
         <div>
-          <h3>
-            pullRight prop
-          </h3>
-          <SplitButton title="Dropdown right" pullRight id="split-button-pull-right">
-            <MenuItem eventKey="1">Action</MenuItem>
-            <MenuItem eventKey="2">Another action</MenuItem>
-            <MenuItem eventKey="3">Something else here</MenuItem>
-            <MenuItem divider />
-            <MenuItem eventKey="4">Separated link</MenuItem>
-          </SplitButton>
+
+          <ComponentHeader title="Menu items" />
+
+          <ComponentExample>
+            <Clearfix>
+              <ul className="dropdown-menu open" style={{display: "block", position: "static"}}>
+                <MenuItem header>Header</MenuItem>
+                <MenuItem>link</MenuItem>
+                <MenuItem divider/>
+                <MenuItem header>Header</MenuItem>
+                <MenuItem>link</MenuItem>
+                <MenuItem disabled>disabled</MenuItem>
+                <MenuItem title="See? I have a title.">
+                  link with title
+                </MenuItem>
+                <MenuItem eventKey={1} href="#" onSelect={(eventKey) => {alert(`Alert from menu item.\neventKey: ${eventKey}`)}}>
+                  link that alerts
+                </MenuItem>
+              </ul>
+            </Clearfix>
+          </ComponentExample>
+
         </div>
         <hr></hr>
         <div>
-          <h3>
-            Menu items
-          </h3>
-          <Clearfix>
-            <ul className="dropdown-menu open" style={{display: "block", position: "static"}}>
-              <MenuItem header>Header</MenuItem>
-              <MenuItem>link</MenuItem>
-              <MenuItem divider/>
-              <MenuItem header>Header</MenuItem>
-              <MenuItem>link</MenuItem>
-              <MenuItem disabled>disabled</MenuItem>
-              <MenuItem title="See? I have a title.">
-                link with title
-              </MenuItem>
-              <MenuItem eventKey={1} href="#" onSelect={(eventKey) => {alert(`Alert from menu item.\neventKey: ${eventKey}`)}}>
-                link that alerts
-              </MenuItem>
-            </ul>
-          </Clearfix>
-        </div>
-        <hr></hr>
-        <div>
+
           <PropTable title="DropdownButton Props">
             <div>
               <Table striped bordered>
@@ -511,9 +536,11 @@ export default class DropdownsRoute extends React.Component {
               </Table>
             </div>
           </PropTable>
+
         </div>
         <hr></hr>
         <div>
+
           <PropTable title="SplitButton Props">
             <div>
               <Table striped bordered>
@@ -896,9 +923,11 @@ export default class DropdownsRoute extends React.Component {
               </Table>
             </div>
           </PropTable>
+
         </div>
         <hr></hr>
         <div>
+
           <PropTable title="Dropdown Props">
             <div>
               <Table striped bordered>
@@ -1193,9 +1222,11 @@ export default class DropdownsRoute extends React.Component {
               </Table>
             </div>
           </PropTable>
+
         </div>
         <hr></hr>
         <div>
+
           <PropTable title="MenuItem Props">
             <div>
               <Table striped bordered>
@@ -1421,6 +1452,7 @@ export default class DropdownsRoute extends React.Component {
               </Table>
             </div>
           </PropTable>
+
         </div>
       </div>
     )
