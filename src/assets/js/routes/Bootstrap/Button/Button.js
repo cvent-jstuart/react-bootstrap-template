@@ -2,6 +2,8 @@ import React from "react";
 
 import { Button, ButtonToolbar, Table, Collapse } from "react-bootstrap";
 import PropTable from "../../../components/PropTable/PropTable";
+import ComponentHeader from "../../../components/ComponentHeader/ComponentHeader";
+import ComponentExample from "../../../components/ComponentExample/ComponentExample";
 
 // require("./.less");
 
@@ -15,94 +17,113 @@ export default class ButtonsRoute extends React.Component {
     return (
       <div className="body">
         <div class="page-header">
-          <h1>Buttons</h1>
+          <h3>Buttons</h3>
         </div>
         <div>
-          <h3>
-            bsStyle
-          </h3>
-          <ButtonToolbar>
-            <Button>Default</Button>
-            <Button bsStyle="primary">Primary</Button>
-            <Button bsStyle="success">Success</Button>
-            <Button bsStyle="info">Info</Button>
-            <Button bsStyle="warning">Warning</Button>
-            <Button bsStyle="danger">Danger</Button>
-            <Button bsStyle="link">Link</Button>
-          </ButtonToolbar>
-        </div>
-        <hr></hr>
-        <div>
-          <h3>
-            bsSize
-          </h3>
-          <ButtonToolbar>
-            <Button bsStyle="primary" bsSize="large">Large button</Button>
-            <Button bsSize="large">Large button</Button>
-          </ButtonToolbar>
-          <ButtonToolbar style={{marginTop: 10 + "px"}}>
-            <Button bsStyle="primary">Default button</Button>
-            <Button>Default button</Button>
-          </ButtonToolbar>
-          <ButtonToolbar style={{marginTop: 10 + "px"}}>
-            <Button bsStyle="primary" bsSize="small">Small button</Button>
-            <Button bsSize="small">Small button</Button>
-          </ButtonToolbar>
-          <ButtonToolbar style={{marginTop: 10 + "px"}}>
-            <Button bsStyle="primary" bsSize="xsmall">Extra small button</Button>
-            <Button bsSize="xsmall">Extra small button</Button>
-          </ButtonToolbar>
-        </div>
-        <hr></hr>
-        <h3>
-          Block
-        </h3>
-        <div>
-          <div className="well" style={{maxWidth: 400, margin: '0 auto 10px'}}>
-            <Button bsStyle="primary" bsSize="large" block>Block level button</Button>
-            <Button bsSize="large" block>Block level button</Button>
-          </div>
+
+          <ComponentHeader title="bsStyle" />
+
+          <ComponentExample>
+            <ButtonToolbar>
+              <Button>Default</Button>
+              <Button bsStyle="primary">Primary</Button>
+              <Button bsStyle="success">Success</Button>
+              <Button bsStyle="info">Info</Button>
+              <Button bsStyle="warning">Warning</Button>
+              <Button bsStyle="danger">Danger</Button>
+              <Button bsStyle="link">Link</Button>
+            </ButtonToolbar>
+          </ComponentExample>
+
         </div>
         <hr></hr>
         <div>
-          <h3>
-            Active
-          </h3>
-          <ButtonToolbar>
-            <Button bsStyle="primary" bsSize="large">Primary button</Button>
-            <Button bsStyle="primary" bsSize="large" active>Active Primary button</Button>
-          </ButtonToolbar>
-          <ButtonToolbar style={{marginTop: 10 + "px"}}>
-            <Button bsSize="large">Button</Button>
-            <Button bsSize="large" active>Active Button</Button>
-          </ButtonToolbar>
+
+          <ComponentHeader title="bsSize" />
+
+          <ComponentExample>
+            <ButtonToolbar>
+              <Button bsStyle="primary" bsSize="large">Large button</Button>
+              <Button bsSize="large">Large button</Button>
+            </ButtonToolbar>
+            <ButtonToolbar style={{marginTop: 10 + "px"}}>
+              <Button bsStyle="primary">Default button</Button>
+              <Button>Default button</Button>
+            </ButtonToolbar>
+            <ButtonToolbar style={{marginTop: 10 + "px"}}>
+              <Button bsStyle="primary" bsSize="small">Small button</Button>
+              <Button bsSize="small">Small button</Button>
+            </ButtonToolbar>
+            <ButtonToolbar style={{marginTop: 10 + "px"}}>
+              <Button bsStyle="primary" bsSize="xsmall">Extra small button</Button>
+              <Button bsSize="xsmall">Extra small button</Button>
+            </ButtonToolbar>
+          </ComponentExample>
+
         </div>
         <hr></hr>
         <div>
-          <h3>
-            Href (returns &lt;a&gt; instead of &lt;button&gt;)
-          </h3>
-          <ButtonToolbar>
-            <Button href="#">Link</Button>
-            <Button>Button</Button>
-          </ButtonToolbar>
+
+          <ComponentHeader title="Block" />
+
+          <ComponentExample>
+            <div>
+              <Button bsStyle="primary" bsSize="large" block>Block level button</Button>
+              <Button bsSize="large" block>Block level button</Button>
+            </div>
+          </ComponentExample>
+
         </div>
         <hr></hr>
         <div>
-          <h3>
-            Disabled
-          </h3>
-          <ButtonToolbar>
-            <Button bsStyle="primary" bsSize="large">Primary button</Button>
-            <Button bsStyle="primary" bsSize="large" disabled>Primary button</Button>
-          </ButtonToolbar>
-          <ButtonToolbar style={{marginTop: 10 + "px"}}>
-            <Button bsSize="large">Button</Button>
-            <Button bsSize="large" disabled>Button</Button>
-          </ButtonToolbar>
+
+          <ComponentHeader title="Active" />
+
+          <ComponentExample>
+            <ButtonToolbar>
+              <Button bsStyle="primary" bsSize="large">Primary button</Button>
+              <Button bsStyle="primary" bsSize="large" active>Active Primary button</Button>
+            </ButtonToolbar>
+            <ButtonToolbar style={{marginTop: 10 + "px"}}>
+              <Button bsSize="large">Button</Button>
+              <Button bsSize="large" active>Active Button</Button>
+            </ButtonToolbar>
+          </ComponentExample>
+
         </div>
         <hr></hr>
         <div>
+
+          <ComponentHeader title="Href (returns &lt;a&gt; instead of &lt;button&gt;)" />
+
+          <ComponentExample>
+            <ButtonToolbar>
+              <Button href="#">Link</Button>
+              <Button>Button</Button>
+            </ButtonToolbar>
+          </ComponentExample>
+
+        </div>
+        <hr></hr>
+        <div>
+
+          <ComponentHeader title="Disabled" />
+
+          <ComponentExample>
+            <ButtonToolbar>
+              <Button bsStyle="primary" bsSize="large">Primary button</Button>
+              <Button bsStyle="primary" bsSize="large" disabled>Primary button</Button>
+            </ButtonToolbar>
+            <ButtonToolbar style={{marginTop: 10 + "px"}}>
+              <Button bsSize="large">Button</Button>
+              <Button bsSize="large" disabled>Button</Button>
+            </ButtonToolbar>
+          </ComponentExample>
+
+        </div>
+        <hr></hr>
+        <div>
+
           <PropTable title="Button Props">
             <div>
               <Table striped bordered>
@@ -146,6 +167,7 @@ export default class ButtonsRoute extends React.Component {
               </Table>
             </div>
           </PropTable>
+
         </div>
       </div>
     )
