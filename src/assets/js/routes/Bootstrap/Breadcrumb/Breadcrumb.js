@@ -19,7 +19,7 @@ export default class NavBarsRoute extends React.Component {
 
           <ComponentHeader
             title="Breadcrumbs Example"
-            subtitle="Breadcrumbs are used to indicate the current page's location. Add active attribute to active Breadcrumb.Item.<br><br>Do not set both active and href attributes. active overrides href and span element is rendered instead of a."
+            subtitle={["Breadcrumbs are used to indicate the current page's location. Add active attribute to active Breadcrumb.Item.","Do not set both active and href attributes. active overrides href and span element is rendered instead of a."]}
           />
 
           <ComponentExample>

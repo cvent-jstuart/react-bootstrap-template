@@ -9,7 +9,13 @@ export default class ComponentHeader extends React.Component {
         <h4 style={this.props.style} onClick={this.props.onClick}>
           {this.props.title}
         </h4>
-        {(this.props.subtitle ? <div>{this.props.subtitle}</div> : null)}
+        {( this.props.subtitle ?
+          Array.isArray(this.props.subtitle) ?
+            this.props.subtitle.map( (st, i) => {
+              return <div key={i} style={{ marginBottom: 15 }}>{st}</div>
+            })
+          : <div style={{ marginBottom: 15 }}>{this.props.subtitle}</div>
+        : null )}
       </div>
     )
   }
