@@ -20,7 +20,9 @@ export default class PropTable extends React.Component {
           subtitle={this.props.subtitle}
         />
         <Collapse in={this.state.open}>
-          {this.props.children}
+          <div>
+            {this.props.children}
+          </div>
         </Collapse>
       </div>
     );
