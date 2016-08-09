@@ -2,6 +2,8 @@ import React from "react";
 
 import { Tooltip, OverlayTrigger, ButtonToolbar, Button, Table } from "react-bootstrap";
 import PropTable from "../../../components/PropTable/PropTable";
+import ComponentHeader from "../../../components/ComponentHeader/ComponentHeader";
+import ComponentExample from "../../../components/ComponentExample/ComponentExample";
 
 // require("./.less");
 
@@ -16,62 +18,102 @@ export default class TooltipRoute extends React.Component {
       <div className="body">
 
         <div class="page-header">
-          <h1>Tooltips</h1>
+          <h3>
+            Tooltips
+          </h3>
         </div>
         <div>
-          <h3>
-            Standard Tooltips
-          </h3>
-          <Tooltip placement="right" className="in" id="tooltip-right" style={{ position: "relative", display: "inline-block", margin: "5px 10px", zIndex: 1 }}>
-            Tooltip right
-          </Tooltip>
 
-          <Tooltip placement="top" className="in" id="tooltip-top" style={{ position: "relative", display: "inline-block", margin: "5px 10px", zIndex: 1 }}>
-            Tooltip top
-          </Tooltip>
+          <ComponentHeader
+            title=""
+            subtitle="Tooltip component for a more stylish alternative to that anchor tag title attribute."
+          />
 
-          <Tooltip placement="left" className="in" id="tooltip-left" style={{ position: "relative", display: "inline-block", margin: "5px 10px", zIndex: 1 }}>
-            Tooltip left
-          </Tooltip>
+          <ComponentExample>
+            <Tooltip
+              placement="right"
+              className="in"
+              id="tooltip-right"
+              style={{ position: "relative", display: "inline-block", margin: "5px 10px", zIndex: 1 }}
+            >
+              Tooltip right
+            </Tooltip>
+            <Tooltip
+              placement="top"
+              className="in"
+              id="tooltip-top"
+              style={{ position: "relative", display: "inline-block", margin: "5px 10px", zIndex: 1 }}
+            >
+              Tooltip top
+            </Tooltip>
+            <Tooltip
+              placement="left"
+              className="in"
+              id="tooltip-left"
+              style={{ position: "relative", display: "inline-block", margin: "5px 10px", zIndex: 1 }}
+            >
+              Tooltip left
+            </Tooltip>
+            <Tooltip
+              placement="bottom"
+              className="in"
+              id="tooltip-bottom"
+              style={{ position: "relative", display: "inline-block", margin: "5px 10px", zIndex: 1 }}
+            >
+              Tooltip bottom
+            </Tooltip>
+          </ComponentExample>
 
-          <Tooltip placement="bottom" className="in" id="tooltip-bottom" style={{ position: "relative", display: "inline-block", margin: "5px 10px", zIndex: 1 }}>
-            Tooltip bottom
-          </Tooltip>
         </div>
         <hr></hr>
         <div>
-          <h3>
-            With OverlayTrigger
-          </h3>
-          <ButtonToolbar>
-            <OverlayTrigger placement="left" overlay={tooltip}>
-              <Button bsStyle="default">Left Placement</Button>
-            </OverlayTrigger>
 
-            <OverlayTrigger placement="top" overlay={tooltip}>
-              <Button bsStyle="default">Top Placement</Button>
-            </OverlayTrigger>
+          <ComponentHeader title="With OverlayTrigger" />
 
-            <OverlayTrigger placement="bottom" overlay={tooltip}>
-              <Button bsStyle="default">Bottom Placement</Button>
-            </OverlayTrigger>
+          <ComponentExample>
+            <ButtonToolbar>
+              <OverlayTrigger
+                placement="left"
+                overlay={tooltip}
+              >
+                <Button bsStyle="default">Left Placement</Button>
+              </OverlayTrigger>
+              <OverlayTrigger
+                placement="top"
+                overlay={tooltip}
+              >
+                <Button bsStyle="default">Top Placement</Button>
+              </OverlayTrigger>
+              <OverlayTrigger
+                placement="bottom"
+                overlay={tooltip}
+              >
+                <Button bsStyle="default">Bottom Placement</Button>
+              </OverlayTrigger>
+              <OverlayTrigger
+                placement="right"
+                overlay={tooltip}
+              >
+                <Button bsStyle="default">Right Placement</Button>
+              </OverlayTrigger>
+            </ButtonToolbar>
+          </ComponentExample>
 
-            <OverlayTrigger placement="right" overlay={tooltip}>
-              <Button bsStyle="default">Right Placement</Button>
-            </OverlayTrigger>
-          </ButtonToolbar>
         </div>
         <hr></hr>
         <div>
-          <h3>
-            Text with Inline Tooltips
-          </h3>
-          <p className="muted" style={{ marginBottom: 0 }}>
-            Tight pants next level keffiyeh <LinkWithTooltip tooltip="Default tooltip" href="#" id="tooltip-1">you probably</LinkWithTooltip> haven&apos;t heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney&apos;s fixie sustainable quinoa 8-bit american apparel <LinkWithTooltip tooltip={<span>Another <strong>tooltip</strong></span>} href="#" id="tooltip-2">have a</LinkWithTooltip> terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweene&apos;s cleanse vegan chambray. A really ironic artisan <LinkWithTooltip tooltip="Another one here too" href="#" id="tooltip-3">whatever keytar</LinkWithTooltip>, scenester farm-to-table banksy Austin <LinkWithTooltip tooltip="The last tip!" href="#" id="tooltip-4">twitter handle</LinkWithTooltip> freegan cred raw denim single-origin coffee viral.
-          </p>
+          <ComponentHeader title="Text with Inline Tooltips" />
+
+          <ComponentExample>
+            <p className="muted" style={{ marginBottom: 0 }}>
+              Tight pants next level keffiyeh <LinkWithTooltip tooltip="Default tooltip" href="#" id="tooltip-1">you probably</LinkWithTooltip> haven&apos;t heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney&apos;s fixie sustainable quinoa 8-bit american apparel <LinkWithTooltip tooltip={<span>Another <strong>tooltip</strong></span>} href="#" id="tooltip-2">have a</LinkWithTooltip> terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweene&apos;s cleanse vegan chambray. A really ironic artisan <LinkWithTooltip tooltip="Another one here too" href="#" id="tooltip-3">whatever keytar</LinkWithTooltip>, scenester farm-to-table banksy Austin <LinkWithTooltip tooltip="The last tip!" href="#" id="tooltip-4">twitter handle</LinkWithTooltip> freegan cred raw denim single-origin coffee viral.
+            </p>
+          </ComponentExample>
+
         </div>
         <hr></hr>
         <div>
+
           <PropTable title="OverlayTrigger Props">
             <div>
               <Table striped bordered>
@@ -376,9 +418,11 @@ export default class TooltipRoute extends React.Component {
               </Table>
             </div>
           </PropTable>
+
         </div>
         <hr></hr>
         <div>
+
           <PropTable title="Tooltip Props">
             <div>
               <Table striped bordered>
@@ -562,6 +606,7 @@ export default class TooltipRoute extends React.Component {
               </Table>
             </div>
           </PropTable>
+          
         </div>
       </div>
     )
