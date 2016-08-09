@@ -3,6 +3,8 @@ import React from "react";
 import { Modal, Table, Button } from "react-bootstrap";
 import ModalByButton from "./ModalByButton"
 import PropTable from "../../../components/PropTable/PropTable";
+import ComponentHeader from "../../../components/ComponentHeader/ComponentHeader";
+import ComponentExample from "../../../components/ComponentExample/ComponentExample";
 
 // require("./.less");
 
@@ -10,47 +12,57 @@ export default class ModalRoute extends React.Component {
   render() {
     return (
       <div className="body">
-
         <div class="page-header">
-          <h1>Modal</h1>
-        </div>
-        <div>
           <h3>
-            Basic Modal
+            Modal
           </h3>
-          <div className="static-modal">
-            <Modal.Dialog style={{position: "static"}}>
-              <Modal.Header>
-                <Modal.Title>Modal title</Modal.Title>
-              </Modal.Header>
-
-              <Modal.Body>
-                One fine body...
-              </Modal.Body>
-
-              <Modal.Footer>
-                <Button>Close</Button>
-                <Button bsStyle="primary">Save changes</Button>
-              </Modal.Footer>
-
-            </Modal.Dialog>
-          </div>
         </div>
-        <hr></hr>
-        <h3>
-          Modal Launch Examples
-        </h3>
         <div>
-          <ModalByButton buttonTitle="Launch Modal"/>
-        </div>
-        <div style={{ marginTop: 10 }}>
-          <ModalByButton buttonTitle="Launch Small Modal" bsSize="small"/>
-        </div>
-        <div style={{ marginTop: 10 }}>
-          <ModalByButton buttonTitle="Launch Large Modal" bsSize="large"/>
+
+          <ComponentHeader title="Basic Modal" />
+
+          <ComponentExample>
+            <div className="static-modal">
+              <Modal.Dialog style={{position: "static"}}>
+                <Modal.Header>
+                  <Modal.Title>Modal title</Modal.Title>
+                </Modal.Header>
+
+                <Modal.Body>
+                  One fine body...
+                </Modal.Body>
+
+                <Modal.Footer>
+                  <Button>Close</Button>
+                  <Button bsStyle="primary">Save changes</Button>
+                </Modal.Footer>
+
+              </Modal.Dialog>
+            </div>
+          </ComponentExample>
+
         </div>
         <hr></hr>
         <div>
+
+          <ComponentHeader title="Modal Launch Examples" />
+
+          <ComponentExample>
+            <div>
+              <ModalByButton buttonTitle="Launch Modal"/>
+            </div>
+            <div style={{ marginTop: 10 }}>
+              <ModalByButton buttonTitle="Launch Small Modal" bsSize="small"/>
+            </div>
+            <div style={{ marginTop: 10 }}>
+              <ModalByButton buttonTitle="Launch Large Modal" bsSize="large"/>
+            </div>
+          </ComponentExample>
+
+        </div>
+        <hr></hr>
+        <div>
+
           <PropTable title="Modal Props">
             <div>
               <Table striped bordered>
@@ -457,9 +469,11 @@ export default class ModalRoute extends React.Component {
               </Table>
             </div>
           </PropTable>
+
         </div>
         <hr></hr>
         <div>
+
           <PropTable title="Modal.Header Props">
             <div>
               <Table striped bordered>
@@ -572,9 +586,11 @@ export default class ModalRoute extends React.Component {
               </Table>
             </div>
           </PropTable>
+
         </div>
         <hr></hr>
         <div>
+
           <PropTable title="Modal.Title Props">
             <div>
               <Table striped bordered>
@@ -623,9 +639,11 @@ export default class ModalRoute extends React.Component {
               </Table>
             </div>
           </PropTable>
+
         </div>
         <hr></hr>
         <div>
+
           <PropTable title="Modal.Body Props">
             <div>
               <Table striped bordered>
@@ -674,9 +692,11 @@ export default class ModalRoute extends React.Component {
               </Table>
             </div>
           </PropTable>
+
         </div>
         <hr></hr>
         <div>
+
           <PropTable title="Modal.Footer Props">
             <div>
               <Table striped bordered>
@@ -725,6 +745,7 @@ export default class ModalRoute extends React.Component {
               </Table>
             </div>
           </PropTable>
+          
         </div>
       </div>
     )
