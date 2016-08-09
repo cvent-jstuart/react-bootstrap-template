@@ -22,7 +22,8 @@ const links = [
       "Paginations",
       "Pagers",
       "Grids",
-      "Jumbotron",
+      "Jumbotrons",
+      "PageHeaders",
       "Tables",
       "Thumbnails",
       "Labels",
@@ -32,7 +33,7 @@ const links = [
       "Listgroups",
       "Panels",
       "Wells",
-      "Carousel",
+      "Carousels",
     ]
   }
 ]
