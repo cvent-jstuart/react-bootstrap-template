@@ -1,6 +1,8 @@
 import React from "react";
 import { Collapse } from "react-bootstrap";
 
+import ComponentHeader from "../ComponentHeader/ComponentHeader";
+
 export default class PropTable extends React.Component {
 
   constructor() {
@@ -11,9 +13,12 @@ export default class PropTable extends React.Component {
   render() {
     return (
       <div>
-        <h3 onClick={ ()=> this.setState({ open: !this.state.open })} style={{cursor: "pointer"}}>
-          {this.props.title}
-        </h3>
+        <ComponentHeader
+          onClick={ ()=> this.setState({ open: !this.state.open })}
+          style={{ cursor: "pointer" }}
+          title={this.props.title}
+          subtitle={this.props.subtitle}
+        />
         <Collapse in={this.state.open}>
           {this.props.children}
         </Collapse>
