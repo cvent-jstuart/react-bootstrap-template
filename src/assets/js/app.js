@@ -40,6 +40,7 @@ import FormLayout from "./routes/Bootstrap/FormLayout/FormLayout";
 import InputGroup from "./routes/Bootstrap/InputGroup/InputGroup";
 import ValidationState from "./routes/Bootstrap/ValidationState/ValidationState";
 import Image from "./routes/Bootstrap/Image/Image";
+import ResponsiveEmbed from "./routes/Bootstrap/ResponsiveEmbed/ResponsiveEmbed";
 
 
 const appRoot = document.getElementById("app-root");
@@ -102,6 +103,7 @@ ReactDOM.render(
         <Route path="inputgroups" component={InputGroup}></Route>
         <Route path="validationstates" component={ValidationState}></Route>
         <Route path="images" component={Image}></Route>
+        <Route path="responsiveembeds" component={ResponsiveEmbed}></Route>
 
       </Route>
     </Router>
