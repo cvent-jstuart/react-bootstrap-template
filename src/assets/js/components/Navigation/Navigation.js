@@ -55,7 +55,6 @@ const links = [
       "Images",
       "Thumbnails",
       "ResponsiveEmbeds",
-      "MediaObjects",
       "Labels",
       "Badges",
       "Alerts",
