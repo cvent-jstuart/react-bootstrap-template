@@ -54,6 +54,7 @@ const links = [
     "Media Content": [
       "Images",
       "Thumbnails",
+      "ResponsiveEmbeds",
       "Labels",
       "Badges",
       "Alerts",
