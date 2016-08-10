@@ -34,6 +34,7 @@ import Pagination from "./routes/Bootstrap/Pagination/Pagination";
 import Pager from "./routes/Bootstrap/Pager/Pager";
 import Grid from "./routes/Bootstrap/Grid/Grid";
 import PageHeader from "./routes/Bootstrap/PageHeader/PageHeader";
+import Form from "./routes/Bootstrap/Form/Form";
 
 const appRoot = document.getElementById("app-root");
 
@@ -89,6 +90,7 @@ ReactDOM.render(
         <Route path="pagers" component={Pager}></Route>
         <Route path="grids" component={Grid}></Route>
         <Route path="pageheaders" component={PageHeader}></Route>
+        <Route path="forms" component={Form}></Route>
       </Route>
     </Router>
   </Provider>,

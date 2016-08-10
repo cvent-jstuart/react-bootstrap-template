@@ -6,9 +6,9 @@ export default class ComponentHeader extends React.Component {
   render() {
     return (
       <div style={{ marginBottom: 15 }}>
-        <h4 style={this.props.style} onClick={this.props.onClick}>
+        <h3 style={this.props.style} onClick={this.props.onClick}>
           {this.props.title}
-        </h4>
+        </h3>
         {( this.props.subtitle ?
           Array.isArray(this.props.subtitle) ?
             this.props.subtitle.map( (st, i) => {
