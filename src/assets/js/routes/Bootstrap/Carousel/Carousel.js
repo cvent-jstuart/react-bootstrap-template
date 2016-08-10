@@ -7,7 +7,7 @@ import ComponentExample from "../../../components/ComponentExample/ComponentExam
 
 // require("./.less");
 
-export default class ThumbnailsRoute extends React.Component {
+export default class CarouselsRoute extends React.Component {
   constructor() {
     super();
     this.state = {
