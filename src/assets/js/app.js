@@ -38,6 +38,7 @@ import Form from "./routes/Bootstrap/Form/Form";
 import SupportedControl from "./routes/Bootstrap/SupportedControl/SupportedControl";
 import FormLayout from "./routes/Bootstrap/FormLayout/FormLayout";
 import InputGroup from "./routes/Bootstrap/InputGroup/InputGroup";
+import ValidationState from "./routes/Bootstrap/ValidationState/ValidationState";
 
 
 const appRoot = document.getElementById("app-root");
@@ -98,6 +99,8 @@ ReactDOM.render(
         <Route path="supportedcontrols" component={SupportedControl}></Route>
         <Route path="formlayouts" component={FormLayout}></Route>
         <Route path="inputgroups" component={InputGroup}></Route>
+        <Route path="validationstates" component={ValidationState}></Route>
+      
 
       </Route>
     </Router>

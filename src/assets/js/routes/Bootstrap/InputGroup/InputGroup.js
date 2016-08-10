@@ -7,7 +7,7 @@ import ComponentExample from "../../../components/ComponentExample/ComponentExam
 
 // require("./.less");
 
-export default class FormLayoutsRoute extends React.Component {
+export default class InputGroupsRoute extends React.Component {
   render() {
     return (
       <div className="body">
