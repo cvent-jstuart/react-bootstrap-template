@@ -43,7 +43,8 @@ const links = [
   },
   {
     "Forms": [
-      "Forms"
+      "Forms",
+      "SupportedControls"
     ]
   },
   {

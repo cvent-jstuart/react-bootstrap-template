@@ -35,6 +35,7 @@ import Pager from "./routes/Bootstrap/Pager/Pager";
 import Grid from "./routes/Bootstrap/Grid/Grid";
 import PageHeader from "./routes/Bootstrap/PageHeader/PageHeader";
 import Form from "./routes/Bootstrap/Form/Form";
+import SupportedControl from "./routes/Bootstrap/SupportedControl/SupportedControl";
 
 const appRoot = document.getElementById("app-root");
 
@@ -91,6 +92,7 @@ ReactDOM.render(
         <Route path="grids" component={Grid}></Route>
         <Route path="pageheaders" component={PageHeader}></Route>
         <Route path="forms" component={Form}></Route>
+        <Route path="SupportedControls" component={SupportedControl}></Route>
       </Route>
     </Router>
   </Provider>,
