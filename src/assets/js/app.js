@@ -37,6 +37,7 @@ import PageHeader from "./routes/Bootstrap/PageHeader/PageHeader";
 import Form from "./routes/Bootstrap/Form/Form";
 import SupportedControl from "./routes/Bootstrap/SupportedControl/SupportedControl";
 import FormLayout from "./routes/Bootstrap/FormLayout/FormLayout";
+import InputGroup from "./routes/Bootstrap/InputGroup/InputGroup";
 
 
 const appRoot = document.getElementById("app-root");
@@ -96,6 +97,7 @@ ReactDOM.render(
         <Route path="forms" component={Form}></Route>
         <Route path="supportedcontrols" component={SupportedControl}></Route>
         <Route path="formlayouts" component={FormLayout}></Route>
+        <Route path="inputgroups" component={InputGroup}></Route>
 
       </Route>
     </Router>

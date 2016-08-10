@@ -45,7 +45,8 @@ const links = [
     "Forms": [
       "Forms",
       "SupportedControls",
-      "FormLayouts"
+      "FormLayouts",
+      "InputGroups"
     ]
   },
   {
