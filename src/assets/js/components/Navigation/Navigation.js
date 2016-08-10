@@ -52,6 +52,7 @@ const links = [
   },
   {
     "Media Content": [
+      "Images",
       "Thumbnails",
       "Labels",
       "Badges",
