@@ -14,6 +14,10 @@ export default class NavBar extends React.Component {
           {links.map((link, i) => {
             if (typeof link === "object" && link !== null) {
               return <NavDropdown title={Object.keys(link)} key={Object.keys(link)} keyVal={Object.keys(link)}>{link[Object.keys(link)]}</NavDropdown>
+            } else if (link === "Separator"){
+              return <li role="separator" class="divider"></li>
+            } else if (link.indexOf('Header:') == 0){
+              return <li class="dropdown-header">{link.split('Header:')[1]}</li>
             } else {
               return <NavItem to={link} key={link}>{link}</NavItem>
             }

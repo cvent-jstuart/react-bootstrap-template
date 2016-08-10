@@ -7,33 +7,57 @@ import NavBar from "./NavBar/NavBar";
 const links = [
   "Home",
   {
-  "Components":
-    [
+    "Buttons": [
       "Buttons",
       "ButtonGroups",
-      "Dropdowns",
+      "Dropdowns"
+    ]
+  },
+  {
+    "Overlays": [
       "Modals",
       "Tooltips",
-      "Popovers",
+      "Popovers"
+    ]
+  },
+  {
+    "Navigation": [
       "Navs",
       "Navbars",
       "Breadcrumbs",
       "Tabs",
       "Paginations",
-      "Pagers",
+      "Pagers"
+    ]
+  },
+  {
+    "Page Layout": [
       "Grids",
       "Jumbotrons",
       "PageHeaders",
       "ListGroups",
       "Tables",
+      "Panels",
+      "Wells"
+    ]
+  },
+  {
+    "Forms": [
+      "Forms",
+      "SupportedControls",
+      "FormLayouts",
+      "InputGroups",
+      "ValidationStates"
+    ]
+  },
+  {
+    "Media Content": [
       "Thumbnails",
       "Labels",
       "Badges",
       "Alerts",
       "Progressbars",
-      "Panels",
-      "Wells",
-      "Carousels",
+      "Carousels"
     ]
   }
 ]
@@ -47,7 +71,7 @@ export default class Navigation extends React.Component {
         {/* Fixed navbar */}
         <nav class="navbar navbar-inverse navbar-fixed-top">
           <div class="container">
-            <NavigationBranding title="React Router Bootstrap Template" />
+            <NavigationBranding title="Bootstrap Template" />
             <NavBar links={links} /> {/*/.nav-collapse */}
           </div>
         </nav>

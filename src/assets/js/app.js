@@ -34,6 +34,12 @@ import Pagination from "./routes/Bootstrap/Pagination/Pagination";
 import Pager from "./routes/Bootstrap/Pager/Pager";
 import Grid from "./routes/Bootstrap/Grid/Grid";
 import PageHeader from "./routes/Bootstrap/PageHeader/PageHeader";
+import Form from "./routes/Bootstrap/Form/Form";
+import SupportedControl from "./routes/Bootstrap/SupportedControl/SupportedControl";
+import FormLayout from "./routes/Bootstrap/FormLayout/FormLayout";
+import InputGroup from "./routes/Bootstrap/InputGroup/InputGroup";
+import ValidationState from "./routes/Bootstrap/ValidationState/ValidationState";
+
 
 const appRoot = document.getElementById("app-root");
 
@@ -89,6 +95,13 @@ ReactDOM.render(
         <Route path="pagers" component={Pager}></Route>
         <Route path="grids" component={Grid}></Route>
         <Route path="pageheaders" component={PageHeader}></Route>
+        <Route path="forms" component={Form}></Route>
+        <Route path="supportedcontrols" component={SupportedControl}></Route>
+        <Route path="formlayouts" component={FormLayout}></Route>
+        <Route path="inputgroups" component={InputGroup}></Route>
+        <Route path="validationstates" component={ValidationState}></Route>
+      
+
       </Route>
     </Router>
   </Provider>,
