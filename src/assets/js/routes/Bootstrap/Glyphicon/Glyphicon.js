@@ -1,29 +1,44 @@
 import React from "react";
 
-import { Badge, Table, PageHeader, Grid, Row, Col } from "react-bootstrap";
+import { Glyphicon, Button, ButtonGroup, ButtonToolbar, Table, PageHeader, Grid, Row, Col } from "react-bootstrap";
 import PropTable from "../../../components/PropTable/PropTable";
 import ComponentHeader from "../../../components/ComponentHeader/ComponentHeader";
 import ComponentExample from "../../../components/ComponentExample/ComponentExample";
 
 // require("./.less");
 
-export default class BadgesRoute extends React.Component {
+export default class GlyphiconsRoute extends React.Component {
   render() {
     return (
       <div className="body">
 
-        <PageHeader>Badges</PageHeader>
+        <PageHeader>Glyphicons</PageHeader>
 
         <Grid>
           <Row>
             <Col>
 
               <ComponentHeader
-                subtitle="Easily highlight new or unread items by adding a <Badge> to links, Bootstrap navs, and more."
+                subtitle="Use them in buttons, button groups for a toolbar, navigation, or prepen form inputs."
               />
 
               <ComponentExample>
-                <p>Badges <Badge>42</Badge></p>
+                <ButtonToolbar>
+                  <ButtonGroup>
+                    <Button><Glyphicon glyph="align-left" /></Button>
+                    <Button><Glyphicon glyph="align-center" /></Button>
+                    <Button><Glyphicon glyph="align-right" /></Button>
+                    <Button><Glyphicon glyph="align-justify" /></Button>
+                  </ButtonGroup>
+                </ButtonToolbar>
+                <ButtonToolbar>
+                  <ButtonGroup>
+                    <Button bsSize="large"><Glyphicon glyph="star" /> Star</Button>
+                    <Button><Glyphicon glyph="star" /> Star</Button>
+                    <Button bsSize="small"><Glyphicon glyph="star" /> Star</Button>
+                    <Button bsSize="xsmall"><Glyphicon glyph="star" /> Star</Button>
+                  </ButtonGroup>
+                </ButtonToolbar>
               </ComponentExample>
 
             </Col>
@@ -37,7 +52,7 @@ export default class BadgesRoute extends React.Component {
             <Col>
 
               <PropTable
-                title="Badge Props"
+                title="Glyphicon Props"
               >
                 <Table striped bordered>
                   <thead>
@@ -67,7 +82,7 @@ export default class BadgesRoute extends React.Component {
                 				</div>
                 			</td>
                 			<td>
-                				'badge'
+                				'glyphicon'
                 			</td>
                 			<td>
                 				<div>
@@ -83,18 +98,25 @@ export default class BadgesRoute extends React.Component {
                 		</tr>
                 		<tr>
                 			<td>
-                				pullRight
+                				glyph required
                 			</td>
                 			<td>
                 				<div>
-                					boolean
+                					string
                 				</div>
                 			</td>
                 			<td>
-                				false
+                				&nbsp;
                 			</td>
                 			<td>
-                				&nbsp;
+                				<div>
+                					<p>
+                						An icon name. See e.g.
+                						<a href="http://getbootstrap.com/components/#glyphicons">
+                							http://getbootstrap.com/components/#glyphicons
+                						</a>
+                					</p>
+                				</div>
                 			</td>
                 		</tr>
                 	</tbody>

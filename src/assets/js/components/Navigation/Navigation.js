@@ -55,12 +55,23 @@ const links = [
       "Images",
       "Thumbnails",
       "ResponsiveEmbeds",
-      "MediaObjects",
+      "Carousels",
+      "MediaObjects"
+    ]
+  },
+  {
+    "Miscellaneous": [
+      "Glyphicons",
       "Labels",
       "Badges",
       "Alerts",
-      "Progressbars",
-      "Carousels"
+      "Progressbars"
+    ]
+  },
+  {
+    "Utilities": [
+      "Transitions",
+      "CustomStyles"
     ]
   }
 ]
