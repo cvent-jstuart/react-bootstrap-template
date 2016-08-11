@@ -43,6 +43,8 @@ import Image from "./routes/Bootstrap/Image/Image";
 import ResponsiveEmbed from "./routes/Bootstrap/ResponsiveEmbed/ResponsiveEmbed";
 import MediaObject from "./routes/Bootstrap/MediaObject/MediaObject";
 import Glyphicon from "./routes/Bootstrap/Glyphicon/Glyphicon";
+import Transition from "./routes/Bootstrap/Transition/Transition";
+
 
 
 const appRoot = document.getElementById("app-root");
@@ -107,6 +109,7 @@ ReactDOM.render(
         <Route path="images" component={Image}></Route>
         <Route path="responsiveembeds" component={ResponsiveEmbed}></Route>
         <Route path="glyphicons" component={Glyphicon}></Route>
+        <Route path="transitions" component={Transition}></Route>
       </Route>
     </Router>
   </Provider>,
