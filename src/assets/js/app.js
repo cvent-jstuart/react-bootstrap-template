@@ -42,6 +42,7 @@ import ValidationState from "./routes/Bootstrap/ValidationState/ValidationState"
 import Image from "./routes/Bootstrap/Image/Image";
 import ResponsiveEmbed from "./routes/Bootstrap/ResponsiveEmbed/ResponsiveEmbed";
 import MediaObject from "./routes/Bootstrap/MediaObject/MediaObject";
+import Glyphicon from "./routes/Bootstrap/Glyphicon/Glyphicon";
 
 
 const appRoot = document.getElementById("app-root");
@@ -105,7 +106,7 @@ ReactDOM.render(
         <Route path="validationstates" component={ValidationState}></Route>
         <Route path="images" component={Image}></Route>
         <Route path="responsiveembeds" component={ResponsiveEmbed}></Route>
-        <Route path="mediaobjects" component={MediaObject}></Route>
+        <Route path="glyphicons" component={Glyphicon}></Route>
       </Route>
     </Router>
   </Provider>,
